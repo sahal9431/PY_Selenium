@@ -21,5 +21,15 @@ Feature: CURA Healthcare Service Automation
 
  Scenario: 5 - Navigate to History page
     Given I log in to CURA with valid credentials
-    When I click on menu and go to History
-    Then I should see the History page
+    When I click on menu and go to "History"
+    Then I should see the "History" page
+
+ Scenario: 6 - Navigate to Profile page
+    Given I log in to CURA with valid credentials
+    When I click on menu and go to "Profile"
+    Then I should see the "Profile" page
+
+ Scenario: 7 - Logout
+    Given I log in to CURA with valid credentials
+    When I click on menu and go to "logout"
+    Then I should see the Login page again

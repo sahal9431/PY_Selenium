@@ -28,3 +28,6 @@ def valid_login(context):
     load_home_page(context)
     login_steps(context, "John Doe", "ThisIsNotAPassword")
 
+@then("I should see the Login page again")
+def step_check_login_page(context):
+    assert "Login" in context.driver.page_source

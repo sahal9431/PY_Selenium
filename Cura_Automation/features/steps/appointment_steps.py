@@ -22,12 +22,24 @@ def validate_appoinment(context):
     heading = context.driver.find_element(By.XPATH, '/html/body/section/div/div/div[1]/h2').text
     assert 'Appointment Confirmation' in heading
 
-@when('I click on menu and go to History')
-def menu_section(context):
+@when('I click on menu and go to "{section}"')
+def menu_section(context, section):
     context.driver.find_element(By.ID, 'menu-toggle').click()
     time.sleep(5)
-    context.driver.find_element(By.LINK_TEXT, 'History').click()
-@then('I should see the History page')
-def history_page(context):
-    WebDriverWait(context.driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//h2")))
-    assert "History" in context.driver.page_source
+    if section == "History":
+        context.driver.find_element(By.LINK_TEXT, 'History').click()
+        time.sleep(5)
+    elif section == "Profile":
+        context.driver.find_element(By.LINK_TEXT, 'Profile').click()
+        time.sleep(5)
+    elif section == "logout":
+        context.driver.find_element(By.LINK_TEXT, 'Logout').click()
+        time.sleep(5)
+
+@then('I should see the "{section}" page')
+def history_page(context, section):
+    WebDriverWait(context.driver, 10).until(EC.visibility_of_element_located((By.XPATH, "/html/body/section/div/div[1]/div/h2")))
+    if section == "History":
+        assert "History" in context.driver.page_source
+    elif section == "Profile":
+        assert "Profile" in context.driver.page_source
