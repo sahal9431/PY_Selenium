@@ -12,6 +12,16 @@ class Login_Page():
         self.sign_up_name = (By.XPATH, '//input[@data-qa="signup-name"]')
         self.sig_up_email = (By.XPATH, '//input[@data-qa="signup-email"]')
         self.sign_up_button = (By.XPATH, '//button[@data-qa="signup-button"]')
+
+        #Creating Account
+        title_gender = (By.ID, "id_gender1")
+        password = (By.ID, "password")
+        days = (By.ID, "days")
+        months = (By.ID, "months")
+        years = (By.ID, "years")
+
+        news_letter = (By.ID, "newsletter")
+        offer = (By.ID, "optin")
     
     def go_to_signup_login_page(self):
         self.wait.until(EC.element_to_be_clickable(self.login_button)).click()
