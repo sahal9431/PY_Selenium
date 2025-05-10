@@ -15,6 +15,7 @@ def driver():
 def home_page(driver):
     driver.get(BASE_URL)
     driver.maximize_window()
+    time.sleep(5)
     return HomePage(driver)
     time.sleep(5)
 
@@ -22,6 +23,9 @@ def home_page(driver):
 def login_page_fun(driver):
     driver.get(BASE_URL)
     driver.maximize_window()
+    time.sleep(5)
+    driver.execute_script("window.scrollTo(0, 0);")
+    time.sleep(5)
     L_page = Login_Page(driver)
     L_page.go_to_signup_login_page()
     return L_page
