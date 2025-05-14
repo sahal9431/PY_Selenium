@@ -42,6 +42,14 @@ class Login_Page():
         self.login_password = (By.XPATH, "//input[@type='password']")
         self.login_button = (By.XPATH, "//button[@type='submit']")
 
+        #log_out
+        self.log_out = (By.XPATH, '//a[normalize-space()= "Logout"]')
+        self.login_page_text = (By.XPATH, '//h2[normalize-space()="Login to your account"]')
+    
+    def log_out_account(self):
+        self.driver.find_element(*self.log_out).click()
+        assert self.wait.until(EC.visibility_of_element_located(self.login_page_text)).is_displayed()
+
     def log_in_acount(self, email, password):
         self.driver.find_element(*self.login_email).send_keys(email)
         self.driver.find_element(*self.login_password).send_keys(password)
