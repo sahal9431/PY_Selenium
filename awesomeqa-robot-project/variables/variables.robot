@@ -25,7 +25,6 @@ ${Regitration_privacy_policy_checkbox}    name=agree
 ${Continue_button}    //input[@value='Continue']
 ${SUCCESS_MESSAGE}     xpath=//h1[text()='Your Account Has Been Created!']
 #Product search variables
-#${Search_Input}    iphone
 ${Search_Input_Field}    xpath=//input[@name='search']
 ${Search_Button}    xpath=//button[@class='btn btn-default btn-lg']
 ${Search_Result_heading}    xpath=//h1[contains(text(), 'Search')]
@@ -36,3 +35,7 @@ ${Cart_button}    id=cart
 ${check_for_product_in_cart_intractive_model}    xpath=//*[@id="cart"]/ul/li[1]/table/tbody/tr/td[2]/a
 ${View_Cart_Button}    xpath=//strong[contains(text(), 'View Cart')]
 ${Verify_Product_in_Cart}    xpath=//div[@id='content']//a[text()='MacBook']
+${Remove_Product_From_Cart}    xpath=//button[@data-original-title='Remove']
+${Verify_cart_is_empty}    xpath=//div/p[contains(text(), 'Your shopping cart is empty!')]
+${checkout_button}    xpath=//strong[contains(text(), 'Checkout')]
+${Verify_checkout_page}    xpath=//div/h1[contains(text(), 'Checkout')]
