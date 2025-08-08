@@ -1,119 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-08-06T08:53:19.931603" rpa="false" schemaversion="5">
-<suite id="s1" name="Login Page Test 3" source="D:\PY_Selenium\awesomeqa-robot-project\tests\Login_Page_Test_3.robot">
-<test id="s1-t1" name="User Logs In With Valid Credentials" line="8">
+<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-08-08T08:24:27.250418" rpa="false" schemaversion="5">
+<suite id="s1" name="View product in cart Test 6" source="D:\PY_Selenium\awesomeqa-robot-project\tests\View_product_in_cart_Test_6.robot">
+<test id="s1-t1" name="View Product In Cart Test" line="7">
 <kw name="Open Home Page" owner="home_page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-08-06T08:53:20.332478" level="INFO">Opening browser 'Chrome' to base url 'https://awesomeqa.com/ui/index.php?route=common/home'.</msg>
+<msg time="2025-08-08T08:24:27.617502" level="INFO">Opening browser 'Chrome' to base url 'https://awesomeqa.com/ui/index.php?route=common/home'.</msg>
 <arg>${Base_Url}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-08-06T08:53:20.332265" elapsed="2.188746"/>
+<status status="PASS" start="2025-08-08T08:24:27.617141" elapsed="2.719372"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-08-06T08:53:22.521241" elapsed="0.038318"/>
+<status status="PASS" start="2025-08-08T08:24:30.336880" elapsed="0.030741"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-08-06T08:53:22.559745" elapsed="0.001477"/>
+<status status="PASS" start="2025-08-08T08:24:30.368240" elapsed="0.002190"/>
 </kw>
 <doc>Opens the home page of the application.</doc>
-<status status="PASS" start="2025-08-06T08:53:20.331519" elapsed="2.229910"/>
+<status status="PASS" start="2025-08-08T08:24:27.616028" elapsed="2.754536"/>
 </kw>
 <kw name="Verify Home Page Title" owner="home_page">
 <kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2025-08-06T08:53:22.569670" level="INFO">${title} = Your Store</msg>
+<msg time="2025-08-08T08:24:30.378625" level="INFO">${title} = Your Store</msg>
 <var>${title}</var>
 <doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-08-06T08:53:22.562371" elapsed="0.007376"/>
+<status status="PASS" start="2025-08-08T08:24:30.371944" elapsed="0.006736"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${title}</arg>
 <arg>${Expected_Home_Page_Title}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-08-06T08:53:22.569968" elapsed="0.000314"/>
+<status status="PASS" start="2025-08-08T08:24:30.378950" elapsed="0.000448"/>
 </kw>
 <arg>Your Store</arg>
 <doc>Verifies that the home page title is correct.</doc>
-<status status="PASS" start="2025-08-06T08:53:22.561935" elapsed="0.008459"/>
+<status status="PASS" start="2025-08-08T08:24:30.371406" elapsed="0.008142"/>
 </kw>
-<kw name="Open Login Page" owner="login_page">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${My_Account_Button}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-08-06T08:53:22.571060" elapsed="0.015577"/>
+<kw name="Search for product" owner="home_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-08T08:24:30.381263" level="INFO">Typing text 'MacBook' into text field 'xpath=//input[@name='search']'.</msg>
+<arg>${Search_Input_Field}</arg>
+<arg>${Product_Name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-08T08:24:30.380624" elapsed="0.112083"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-06T08:53:22.587318" level="INFO">Clicking element 'xpath=//a[@title='My Account']'.</msg>
-<arg>${My_Account_Button}</arg>
+<msg time="2025-08-08T08:24:30.493566" level="INFO">Clicking element 'xpath=//button[@class='btn btn-default btn-lg']'.</msg>
+<arg>${Search_Button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-06T08:53:22.586935" elapsed="0.079553"/>
+<status status="PASS" start="2025-08-08T08:24:30.493093" elapsed="0.347108"/>
 </kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${Login_Button_home}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-08-06T08:53:22.666834" elapsed="0.012220"/>
+<arg>MacBook</arg>
+<doc>Searches for a product on the home page.</doc>
+<status status="PASS" start="2025-08-08T08:24:30.380092" elapsed="0.460248"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-06T08:53:22.679647" level="INFO">Clicking element 'xpath=//a[text()='Login']'.</msg>
-<arg>${Login_Button_home}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-06T08:53:22.679318" elapsed="0.238488"/>
-</kw>
-<doc>Opens the login page of the application.</doc>
-<status status="PASS" start="2025-08-06T08:53:22.570750" elapsed="0.347235"/>
-</kw>
-<kw name="Enter Login Credentials" owner="login_page">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-06T08:53:22.919204" level="INFO">Typing text 'testuser@awesomeqa.com' into text field 'name=email'.</msg>
-<arg>${Input_Email_login_page}</arg>
-<arg>${VALID_EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-06T08:53:22.918859" elapsed="0.103116"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-06T08:53:23.022500" level="INFO">Typing text 'test123' into text field 'name=password'.</msg>
-<arg>${Input_Password_login_page}</arg>
-<arg>${VALID_PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-06T08:53:23.022173" elapsed="0.064740"/>
-</kw>
-<doc>Enters the login credentials into the login form.</doc>
-<status status="PASS" start="2025-08-06T08:53:22.918420" elapsed="0.168626"/>
-</kw>
-<kw name="Click login Button" owner="login_page">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-08-06T08:53:23.087993" level="INFO">Clicking button 'xpath=//input[@value='Login']'.</msg>
-<arg>xpath=${Login_button}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-06T08:53:23.087760" elapsed="0.066108"/>
-</kw>
-<doc>Clicks the login button to submit the login form.</doc>
-<status status="PASS" start="2025-08-06T08:53:23.087443" elapsed="0.066556"/>
-</kw>
-<kw name="Verify Login Successful" owner="login_page">
+<kw name="Verify Search Result" owner="home_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${MY_ACCOUNT_TEXT}</arg>
-<arg>timeout=10s</arg>
+<arg>${Search_Result_heading}</arg>
+<arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-06T08:53:23.154777" elapsed="0.237180"/>
+<status status="PASS" start="2025-08-08T08:24:30.841022" elapsed="0.022902"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-06T08:53:23.410522" level="INFO">Element 'xpath=//h2[text()='My Account']' contains text 'My Account'.</msg>
-<arg>${MY_ACCOUNT_TEXT}</arg>
-<arg>My Account</arg>
+<msg time="2025-08-08T08:24:30.886092" level="INFO">Element 'xpath=//h1[contains(text(), 'Search')]' contains text 'Search'.</msg>
+<arg>${Search_Result_heading}</arg>
+<arg>Search</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-06T08:53:23.392126" elapsed="0.018935"/>
+<status status="PASS" start="2025-08-08T08:24:30.864113" elapsed="0.022076"/>
 </kw>
-<status status="PASS" start="2025-08-06T08:53:23.154416" elapsed="0.256880"/>
+<doc>Verifies that the search result matches the expected result.</doc>
+<status status="PASS" start="2025-08-08T08:24:30.840714" elapsed="0.045575"/>
 </kw>
-<status status="PASS" start="2025-08-06T08:53:20.330764" elapsed="3.080847"/>
+<kw name="Add product to cart" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Add_macbook to carrt}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-08T08:24:30.887048" elapsed="0.019115"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-08T08:24:30.906678" level="INFO">Clicking element 'xpath=//*[@id="content"]/div[3]/div[1]/div/div[2]/div[2]/button[1]'.</msg>
+<arg>${Add_macbook to carrt}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-08T08:24:30.906381" elapsed="0.072109"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SUCCESS_MESSAGE_ADD_TO_CART}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-08T08:24:30.978666" elapsed="0.109404"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-08T08:24:31.114505" level="INFO">Element 'xpath=//div[contains(@class, 'alert alert-success alert-dismissible')]' contains text 'Success: You have added MacBook to your shopping cart!'.</msg>
+<arg>${SUCCESS_MESSAGE_ADD_TO_CART}</arg>
+<arg>Success: You have added MacBook to your shopping cart!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-08T08:24:31.088538" elapsed="0.026097"/>
+</kw>
+<doc>Adds a product to the cart.And verifies Success message.</doc>
+<status status="PASS" start="2025-08-08T08:24:30.886696" elapsed="0.228075"/>
+</kw>
+<kw name="open cart section" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Cart_button}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-08T08:24:31.115730" elapsed="0.025645"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-08T08:24:31.142299" level="INFO">Clicking element 'id=cart'.</msg>
+<arg>${Cart_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-08T08:24:31.141766" elapsed="0.089263"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${check_for_product_in_cart_intractive_model}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-08T08:24:31.231275" elapsed="0.016950"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-08T08:24:31.261156" level="INFO">Element 'xpath=//*[@id="cart"]/ul/li[1]/table/tbody/tr/td[2]/a' contains text 'MacBook'.</msg>
+<arg>${check_for_product_in_cart_intractive_model}</arg>
+<arg>MacBook</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-08T08:24:31.248442" elapsed="0.012811"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-08T08:24:31.261637" level="INFO">Clicking element 'xpath=//strong[contains(text(), 'View Cart')]'.</msg>
+<arg>${View_Cart_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-08T08:24:31.261413" elapsed="0.245242"/>
+</kw>
+<doc>Opens the cart section to view the added product.</doc>
+<status status="PASS" start="2025-08-08T08:24:31.115279" elapsed="0.391487"/>
+</kw>
+<kw name="Verify product in cart" owner="cart_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Verify_Product_in_Cart}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-08T08:24:31.507904" elapsed="0.035233"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-08T08:24:31.561218" level="INFO">Element 'xpath=//div[@id='content']//a[text()='MacBook']' contains text 'MacBook'.</msg>
+<arg>${Verify_Product_in_Cart}</arg>
+<arg>MacBook</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-08T08:24:31.543316" elapsed="0.017992"/>
+</kw>
+<doc>Verifies that the product is present in the cart.</doc>
+<status status="PASS" start="2025-08-08T08:24:31.507409" elapsed="0.054133"/>
+</kw>
+<doc>This test case verifies that a product can be added to the cart and viewed correctly.</doc>
+<status status="PASS" start="2025-08-08T08:24:27.614570" elapsed="3.947314"/>
 </test>
-<status status="PASS" start="2025-08-06T08:53:19.932965" elapsed="3.479597"/>
+<status status="PASS" start="2025-08-08T08:24:27.252125" elapsed="4.310846"/>
 </suite>
 <statistics>
 <total>
@@ -122,7 +167,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Login Page Test 3" id="s1" pass="1" fail="0" skip="0">Login Page Test 3</stat>
+<stat name="View product in cart Test 6" id="s1" pass="1" fail="0" skip="0">View product in cart Test 6</stat>
 </suite>
 </statistics>
 <errors>
