@@ -1,11 +1,11 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource   ../pages/home_page.robot
+Resource    ../pages/home_page.robot
 Resource    ../pages/checkout_page.robot
 
 *** Test Cases ***
-Checkout Product Test
-    [Documentation]    This test case verifies that a product can be checked out successfully.
+Checkout using guest account Test
+    [Documentation]    This test case verifies that a product can be checked out successfully using a guest account.
     Given Open Home Page
     And Verify Home Page Title    Your Store
     And Search for product    MacBook
@@ -13,3 +13,5 @@ Checkout Product Test
     And Add product to cart
     When Click Checkout Button
     Then Verify_checkout_page
+    And Select guest checkout Radio Button
+    And Fill Checkout Page Guest Form

@@ -36,7 +36,9 @@ Add product to cart
 open cart section
     [Documentation]    Opens the cart section to view the added product.
     Wait Until Element Is Visible    ${Cart_button}   10s
-    Click Element    ${Cart_button}
+    Sleep    10s
+    Wait Until Keyword Succeeds    5x    2s    Click Element    ${Cart_button}
+    Sleep    10s
     Wait Until Element Is Visible    ${check_for_product_in_cart_intractive_model}   10s
     Element Should Contain    ${check_for_product_in_cart_intractive_model}    MacBook
     Click Element    ${View_Cart_Button}

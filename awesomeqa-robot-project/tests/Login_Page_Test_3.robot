@@ -6,9 +6,9 @@ Resource   ../pages/home_page.robot
 
 *** Test Cases ***
 User Logs In With Valid Credentials
-    Open Home Page
-    Verify Home Page Title    Your Store
-    Open Login Page
-    Enter Login Credentials
-    Click login Button
-    Verify Login Successful
+    Given Open Home Page
+    And Verify Home Page Title    Your Store
+    And Open Login Page
+    When Enter Login Credentials
+    And Click login Button
+    Then Verify Login Successful
