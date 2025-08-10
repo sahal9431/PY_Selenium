@@ -35,10 +35,20 @@ Add product to cart
 
 open cart section
     [Documentation]    Opens the cart section to view the added product.
-    Wait Until Element Is Visible    ${Cart_button}   10s
-    Sleep    10s
     Wait Until Keyword Succeeds    5x    2s    Click Element    ${Cart_button}
-    Sleep    10s
     Wait Until Element Is Visible    ${check_for_product_in_cart_intractive_model}   10s
     Element Should Contain    ${check_for_product_in_cart_intractive_model}    MacBook
     Click Element    ${View_Cart_Button}
+
+Open cart page
+    [Documentation]    Opens the cart page to view the products in the cart.
+    Wait Until Keyword Succeeds    5x    2s    Click Element    ${Cart_button}
+    Wait Until Keyword Succeeds    5x    2s    Click Element    ${View_Cart_Button}
+
+Add product to cart by name
+    [Arguments]    ${Product_Name}
+    [Documentation]    Adds a product to the cart by its name.
+    Input Text    ${Search_Input_Field}    ${Product_Name}
+    Wait Until Keyword Succeeds    5x    2s    Click Element    ${Search_Button}
+    Wait Until Element Is Visible    xpath=//h1[contains(text(), '${Product_Name}')]   10s
+    Wait Until Keyword Succeeds    5x    2s    Click Element    xpath=//a[normalize-space(text())='${Product_Name}']/ancestor::div[@class='caption']/following-sibling::div[@class='button-group']/button[@type='button']

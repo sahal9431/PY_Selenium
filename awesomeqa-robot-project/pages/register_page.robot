@@ -3,7 +3,6 @@ Library    SeleniumLibrary
 Resource    ../variables/variables.robot
 
 *** Keywords ***
-
 Open Register Page
     [Documentation]    Opens the registration page of the application.
     wait Until Page Contains Element    ${My_Account_Button}    timeout=10s

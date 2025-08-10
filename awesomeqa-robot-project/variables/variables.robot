@@ -43,6 +43,9 @@ ${View_Cart_Button}    xpath=//strong[contains(text(), 'View Cart')]
 ${Verify_Product_in_Cart}    xpath=//div[@id='content']//a[text()='MacBook']
 ${Remove_Product_From_Cart}    xpath=//button[@data-original-title='Remove']
 ${Verify_cart_is_empty}    xpath=//div/p[contains(text(), 'Your shopping cart is empty!')]
+${Item_Price_in_Cart}    xpath=//tbody/tr/td[6][@class='text-right']
+#${Total_price_in_cart}    xpath=//table[@class='table table-bordered']/tbody/tr[4]/td[2][@class= 'text-right']
+${Total_price_in_cart}    xpath=(//table[@class='table table-bordered']//td[@class='text-right'])[last()]
 
 #Checkout page variables
 ${checkout_button}    xpath=//*[@id="cart"]/ul/li[2]/div/p/a[2]/strong

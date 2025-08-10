@@ -1,388 +1,758 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-08-09T22:56:17.479467" rpa="false" schemaversion="5">
-<suite id="s1" name="User Should Filter And Sort Search Results Test 11" source="D:\PY_Selenium\awesomeqa-robot-project\tests\User_Should_Filter_And_Sort_Search_Results_Test_11.robot">
-<test id="s1-t1" name="User Should Filter And Sort Search Results" line="7">
+<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-08-10T13:04:09.753326" rpa="false" schemaversion="5">
+<suite id="s1" name="Add multiple product to cart and Verify Total Test 12" source="D:\PY_Selenium\awesomeqa-robot-project\tests\Add_multiple_product_to_cart_and_Verify_Total_Test_12.robot">
+<test id="s1-t1" name="Add Multiple Products to Cart and Verify Total" line="7">
 <kw name="Open Home Page" owner="home_page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-08-09T22:56:17.804539" level="INFO">Opening browser 'Chrome' to base url 'https://awesomeqa.com/ui/index.php?route=common/home'.</msg>
+<msg time="2025-08-10T13:04:10.184269" level="INFO">Opening browser 'Chrome' to base url 'https://awesomeqa.com/ui/index.php?route=common/home'.</msg>
 <arg>${Base_Url}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-08-09T22:56:17.804315" elapsed="2.329428"/>
+<status status="PASS" start="2025-08-10T13:04:10.184049" elapsed="6.737168"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-08-09T22:56:20.133985" elapsed="0.038152"/>
+<status status="PASS" start="2025-08-10T13:04:16.921699" elapsed="0.039074"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-08-09T22:56:20.172481" elapsed="0.001451"/>
+<status status="PASS" start="2025-08-10T13:04:16.961073" elapsed="0.001302"/>
 </kw>
 <doc>Opens the home page of the application.</doc>
-<status status="PASS" start="2025-08-09T22:56:17.803637" elapsed="2.370416"/>
+<status status="PASS" start="2025-08-10T13:04:10.183394" elapsed="6.779134"/>
 </kw>
 <kw name="Verify Home Page Title" owner="home_page">
 <kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2025-08-09T22:56:20.181517" level="INFO">${title} = Your Store</msg>
+<msg time="2025-08-10T13:04:16.977938" level="INFO">${title} = Your Store</msg>
 <var>${title}</var>
 <doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-08-09T22:56:20.174983" elapsed="0.006595"/>
+<status status="PASS" start="2025-08-10T13:04:16.963548" elapsed="0.014451"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${title}</arg>
 <arg>${Expected_Home_Page_Title}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-08-09T22:56:20.181773" elapsed="0.000259"/>
+<status status="PASS" start="2025-08-10T13:04:16.978192" elapsed="0.000258"/>
 </kw>
 <arg>Your Store</arg>
 <doc>Verifies that the home page title is correct.</doc>
-<status status="PASS" start="2025-08-09T22:56:20.174486" elapsed="0.007646"/>
+<status status="PASS" start="2025-08-10T13:04:16.963220" elapsed="0.015312"/>
 </kw>
 <kw name="Search for product" owner="home_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-09T22:56:20.183127" level="INFO">Typing text 'Mac' into text field 'xpath=//input[@name='search']'.</msg>
+<msg time="2025-08-10T13:04:16.979644" level="INFO">Typing text 'MacBook' into text field 'xpath=//input[@name='search']'.</msg>
 <arg>${Search_Input_Field}</arg>
 <arg>${Product_Name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-09T22:56:20.182753" elapsed="0.105814"/>
+<status status="PASS" start="2025-08-10T13:04:16.979141" elapsed="0.120829"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-09T22:56:20.289761" level="INFO">Clicking element 'xpath=//button[@class='btn btn-default btn-lg']'.</msg>
+<msg time="2025-08-10T13:04:17.100579" level="INFO">Clicking element 'xpath=//button[@class='btn btn-default btn-lg']'.</msg>
 <arg>${Search_Button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-09T22:56:20.288949" elapsed="0.301479"/>
+<status status="PASS" start="2025-08-10T13:04:17.100249" elapsed="0.617400"/>
 </kw>
-<arg>Mac</arg>
+<arg>MacBook</arg>
 <doc>Searches for a product on the home page.</doc>
-<status status="PASS" start="2025-08-09T22:56:20.182457" elapsed="0.408184"/>
+<status status="PASS" start="2025-08-10T13:04:16.978881" elapsed="0.738905"/>
 </kw>
-<kw name="Verify Search Result" owner="home_page">
+<kw name="Add product to cart by name" owner="home_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-10T13:04:17.719163" level="INFO">Typing text 'MacBook' into text field 'xpath=//input[@name='search']'.</msg>
+<arg>${Search_Input_Field}</arg>
+<arg>${Product_Name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-10T13:04:17.718747" elapsed="0.063250"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-10T13:04:17.783296" level="INFO">Clicking element 'xpath=//button[@class='btn btn-default btn-lg']'.</msg>
+<arg>${Search_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-10T13:04:17.782936" elapsed="0.239911"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${Search_Button}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-08-10T13:04:17.782309" elapsed="0.240672"/>
+</kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Search_Result_heading}</arg>
+<arg>xpath=//h1[contains(text(), '${Product_Name}')]</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-09T22:56:20.592162" elapsed="0.023855"/>
+<status status="PASS" start="2025-08-10T13:04:18.023183" elapsed="0.070460"/>
 </kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-09T22:56:20.649144" level="INFO">Element 'xpath=//h1[contains(text(), 'Search')]' contains text 'Search'.</msg>
-<arg>${Search_Result_heading}</arg>
-<arg>Search</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-09T22:56:20.616211" elapsed="0.033042"/>
-</kw>
-<doc>Verifies that the search result matches the expected result.</doc>
-<status status="PASS" start="2025-08-09T22:56:20.591409" elapsed="0.057954"/>
-</kw>
-<kw name="Select category" owner="search_page">
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2025-08-09T22:56:20.650670" level="INFO">Selecting options from selection list 'xpath=//select[@name='category_id']' by label Laptops &amp; Notebooks.</msg>
-<arg>${Search_catogory_dropdown}</arg>
-<arg>${Category_Name}</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2025-08-09T22:56:20.650416" elapsed="0.103797"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-10T13:04:18.094204" level="INFO">Clicking element 'xpath=//a[normalize-space(text())='MacBook']/ancestor::div[@class='caption']/following-sibling::div[@class='button-group']/button[@type='button']'.</msg>
+<arg>xpath=//a[normalize-space(text())='${Product_Name}']/ancestor::div[@class='caption']/following-sibling::div[@class='button-group']/button[@type='button']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-10T13:04:18.094007" elapsed="0.060365"/>
 </kw>
 <arg>5x</arg>
 <arg>2s</arg>
-<arg>Select From List By Label</arg>
-<arg>${Search_catogory_dropdown}</arg>
-<arg>${Category_Name}</arg>
+<arg>Click Element</arg>
+<arg>xpath=//a[normalize-space(text())='${Product_Name}']/ancestor::div[@class='caption']/following-sibling::div[@class='button-group']/button[@type='button']</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-08-09T22:56:20.650167" elapsed="0.104150"/>
+<status status="PASS" start="2025-08-10T13:04:18.093813" elapsed="0.060659"/>
 </kw>
-<arg>Laptops &amp; Notebooks</arg>
-<doc>Selects a category from the Search Page.</doc>
-<status status="PASS" start="2025-08-09T22:56:20.649735" elapsed="0.104659"/>
+<arg>MacBook</arg>
+<doc>Adds a product to the cart by its name.</doc>
+<status status="PASS" start="2025-08-10T13:04:17.718222" elapsed="0.436323"/>
 </kw>
-<kw name="Sort search results" owner="search_page">
+<kw name="Add product to cart by name" owner="home_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-10T13:04:18.155618" level="INFO">Typing text 'iPhone' into text field 'xpath=//input[@name='search']'.</msg>
+<arg>${Search_Input_Field}</arg>
+<arg>${Product_Name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-10T13:04:18.155333" elapsed="0.074423"/>
+</kw>
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2025-08-09T22:56:20.755772" level="INFO">Selecting options from selection list 'id=input-sort' by label Price (High &gt; Low).</msg>
-<arg>${Search_Sort_dropdown}</arg>
-<arg>${Sort_Order}</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2025-08-09T22:56:20.755562" elapsed="0.265949"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-10T13:04:18.230712" level="INFO">Clicking element 'xpath=//button[@class='btn btn-default btn-lg']'.</msg>
+<arg>${Search_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-10T13:04:18.230404" elapsed="0.385243"/>
 </kw>
 <arg>5x</arg>
 <arg>2s</arg>
-<arg>Select From List By Label</arg>
-<arg>${Search_Sort_dropdown}</arg>
-<arg>${Sort_Order}</arg>
+<arg>Click Element</arg>
+<arg>${Search_Button}</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-08-09T22:56:20.755307" elapsed="0.266315"/>
+<status status="PASS" start="2025-08-10T13:04:18.229983" elapsed="0.385861"/>
 </kw>
-<arg>Price (High &gt; Low)</arg>
-<doc>Sorts the search results based on the provided order.</doc>
-<status status="PASS" start="2025-08-09T22:56:20.754856" elapsed="0.266867"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//h1[contains(text(), '${Product_Name}')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-10T13:04:18.616148" elapsed="0.033159"/>
 </kw>
-<kw name="Verify search result are sorted order" owner="search_page">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-10T13:04:18.650002" level="INFO">Clicking element 'xpath=//a[normalize-space(text())='iPhone']/ancestor::div[@class='caption']/following-sibling::div[@class='button-group']/button[@type='button']'.</msg>
+<arg>xpath=//a[normalize-space(text())='${Product_Name}']/ancestor::div[@class='caption']/following-sibling::div[@class='button-group']/button[@type='button']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-10T13:04:18.649678" elapsed="0.054535"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>xpath=//a[normalize-space(text())='${Product_Name}']/ancestor::div[@class='caption']/following-sibling::div[@class='button-group']/button[@type='button']</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-08-10T13:04:18.649494" elapsed="0.054885"/>
+</kw>
+<arg>iPhone</arg>
+<doc>Adds a product to the cart by its name.</doc>
+<status status="PASS" start="2025-08-10T13:04:18.154965" elapsed="0.549503"/>
+</kw>
+<kw name="Open cart page" owner="home_page">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-10T13:04:18.706550" level="INFO">Clicking element 'id=cart-total'.</msg>
+<arg>${Cart_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-10T13:04:18.706370" elapsed="0.256634"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${Cart_button}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-08-10T13:04:18.706193" elapsed="0.256959"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-10T13:04:18.963967" level="INFO">Clicking element 'xpath=//strong[contains(text(), 'View Cart')]'.</msg>
+<arg>${View_Cart_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-10T13:04:18.963677" elapsed="0.062059"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${View_Cart_Button}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-08-10T13:04:18.963368" elapsed="0.062462"/>
+</kw>
+<doc>Opens the cart page to view the products in the cart.</doc>
+<status status="PASS" start="2025-08-10T13:04:18.705815" elapsed="0.320088"/>
+</kw>
+<kw name="Get item price from cart" owner="cart_page">
 <kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-08-09T22:56:21.050615" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="80be69355fad50adc434e102a251034b", element="f.B2A036B19C375002CFFB365EAE4A0F25.d.7692578B01EC88E366873DF0F9913868.e.111")&gt;, &lt;selenium.webdri...</msg>
-<var>${elements}</var>
-<arg>${Search_price}</arg>
+<msg time="2025-08-10T13:04:29.062096" level="INFO">${item_prices} = []</msg>
+<var>${item_prices}</var>
+<arg>${Item_Price_in_Cart}</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.022755" elapsed="0.027913"/>
+<status status="PASS" start="2025-08-10T13:04:19.026682" elapsed="10.035519"/>
 </kw>
 <kw name="Create List" owner="BuiltIn">
-<msg time="2025-08-09T22:56:21.051047" level="INFO">${actual_order} = []</msg>
-<var>${actual_order}</var>
+<msg time="2025-08-10T13:04:29.062862" level="INFO">${price_list} = []</msg>
+<var>${price_list}</var>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.050886" elapsed="0.000194"/>
+<status status="PASS" start="2025-08-10T13:04:29.062537" elapsed="0.000389"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-08-09T22:56:21.065602" level="INFO">${text} = $2,000.00
-Ex Tax: $2,000.00</msg>
-<var>${text}</var>
-<arg>${element}</arg>
+<var>${clean}</var>
+<arg>${price}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.051446" elapsed="0.014204"/>
+<status status="NOT RUN" start="2025-08-10T13:04:29.063776" elapsed="0.000063"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2025-08-09T22:56:21.066569" level="INFO">${price_clean} = 2,000.00
-Ex Tax: 2,000.00</msg>
-<var>${price_clean}</var>
-<arg>${text}</arg>
+<var>${clean}</var>
+<arg>${clean}</arg>
 <arg>$</arg>
 <arg>${EMPTY}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.065814" elapsed="0.000802"/>
+<status status="NOT RUN" start="2025-08-10T13:04:29.064057" elapsed="0.000061"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2025-08-09T22:56:21.067415" level="INFO">${price_clean} = 2000.00
-Ex Tax: 2000.00</msg>
-<var>${price_clean}</var>
-<arg>${price_clean}</arg>
+<var>${clean}</var>
+<arg>${clean}</arg>
 <arg>,</arg>
 <arg>${EMPTY}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.066796" elapsed="0.000645"/>
+<status status="NOT RUN" start="2025-08-10T13:04:29.064328" elapsed="0.000054"/>
 </kw>
 <kw name="Fetch From Left" owner="String">
-<msg time="2025-08-09T22:56:21.067839" level="INFO">${price_clean} = 2000.00</msg>
-<var>${price_clean}</var>
-<arg>${price_clean}</arg>
+<var>${clean}</var>
+<arg>${clean}</arg>
 <arg>\n</arg>
 <doc>Returns contents of the ``string`` before the first occurrence of ``marker``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.067550" elapsed="0.000321"/>
+<status status="NOT RUN" start="2025-08-10T13:04:29.064598" elapsed="0.000053"/>
 </kw>
 <kw name="Convert To Number" owner="BuiltIn">
-<msg time="2025-08-09T22:56:21.068135" level="INFO">${num} = 2000.0</msg>
 <var>${num}</var>
-<arg>${price_clean}</arg>
+<arg>${clean}</arg>
 <doc>Converts the given item to a floating point number.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.067981" elapsed="0.000177"/>
+<status status="NOT RUN" start="2025-08-10T13:04:29.064940" elapsed="0.000082"/>
 </kw>
 <kw name="Append To List" owner="Collections">
-<arg>${actual_order}</arg>
+<arg>${price_list}</arg>
 <arg>${num}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.068247" elapsed="0.000122"/>
+<status status="NOT RUN" start="2025-08-10T13:04:29.065323" elapsed="0.000089"/>
 </kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="80be69355fad50adc434e102a251034b", element="f.B2A036B19C375002CFFB365EAE4A0F25.d.7692578B01EC88E366873DF0F9913868.e.111")&gt;</var>
-<status status="PASS" start="2025-08-09T22:56:21.051357" elapsed="0.017053"/>
+<var name="${price}"/>
+<status status="NOT RUN" start="2025-08-10T13:04:29.063525" elapsed="0.002032"/>
 </iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-08-09T22:56:21.080031" level="INFO">${text} = $1,202.00
-Ex Tax: $1,000.00</msg>
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.068632" elapsed="0.011453"/>
-</kw>
-<kw name="Replace String" owner="String">
-<msg time="2025-08-09T22:56:21.081229" level="INFO">${price_clean} = 1,202.00
-Ex Tax: 1,000.00</msg>
-<var>${price_clean}</var>
-<arg>${text}</arg>
-<arg>$</arg>
-<arg>${EMPTY}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.080287" elapsed="0.000980"/>
-</kw>
-<kw name="Replace String" owner="String">
-<msg time="2025-08-09T22:56:21.082234" level="INFO">${price_clean} = 1202.00
-Ex Tax: 1000.00</msg>
-<var>${price_clean}</var>
-<arg>${price_clean}</arg>
-<arg>,</arg>
-<arg>${EMPTY}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.081429" elapsed="0.000842"/>
-</kw>
-<kw name="Fetch From Left" owner="String">
-<msg time="2025-08-09T22:56:21.082616" level="INFO">${price_clean} = 1202.00</msg>
-<var>${price_clean}</var>
-<arg>${price_clean}</arg>
-<arg>\n</arg>
-<doc>Returns contents of the ``string`` before the first occurrence of ``marker``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.082417" elapsed="0.000233"/>
-</kw>
-<kw name="Convert To Number" owner="BuiltIn">
-<msg time="2025-08-09T22:56:21.082988" level="INFO">${num} = 1202.0</msg>
-<var>${num}</var>
-<arg>${price_clean}</arg>
-<doc>Converts the given item to a floating point number.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.082783" elapsed="0.000237"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${actual_order}</arg>
-<arg>${num}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.083140" elapsed="0.000186"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="80be69355fad50adc434e102a251034b", element="f.B2A036B19C375002CFFB365EAE4A0F25.d.7692578B01EC88E366873DF0F9913868.e.112")&gt;</var>
-<status status="PASS" start="2025-08-09T22:56:21.068547" elapsed="0.014835"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-08-09T22:56:21.096374" level="INFO">${text} = $602.00
-Ex Tax: $500.00</msg>
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.083662" elapsed="0.012778"/>
-</kw>
-<kw name="Replace String" owner="String">
-<msg time="2025-08-09T22:56:21.097704" level="INFO">${price_clean} = 602.00
-Ex Tax: 500.00</msg>
-<var>${price_clean}</var>
-<arg>${text}</arg>
-<arg>$</arg>
-<arg>${EMPTY}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.096670" elapsed="0.001080"/>
-</kw>
-<kw name="Replace String" owner="String">
-<msg time="2025-08-09T22:56:21.098860" level="INFO">${price_clean} = 602.00
-Ex Tax: 500.00</msg>
-<var>${price_clean}</var>
-<arg>${price_clean}</arg>
-<arg>,</arg>
-<arg>${EMPTY}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.097942" elapsed="0.000959"/>
-</kw>
-<kw name="Fetch From Left" owner="String">
-<msg time="2025-08-09T22:56:21.099287" level="INFO">${price_clean} = 602.00</msg>
-<var>${price_clean}</var>
-<arg>${price_clean}</arg>
-<arg>\n</arg>
-<doc>Returns contents of the ``string`` before the first occurrence of ``marker``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.099069" elapsed="0.000255"/>
-</kw>
-<kw name="Convert To Number" owner="BuiltIn">
-<msg time="2025-08-09T22:56:21.099717" level="INFO">${num} = 602.0</msg>
-<var>${num}</var>
-<arg>${price_clean}</arg>
-<doc>Converts the given item to a floating point number.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.099476" elapsed="0.000278"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${actual_order}</arg>
-<arg>${num}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.099923" elapsed="0.000188"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="80be69355fad50adc434e102a251034b", element="f.B2A036B19C375002CFFB365EAE4A0F25.d.7692578B01EC88E366873DF0F9913868.e.113")&gt;</var>
-<status status="PASS" start="2025-08-09T22:56:21.083554" elapsed="0.016625"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-08-09T22:56:21.112246" level="INFO">${text} = $122.00
-Ex Tax: $100.00</msg>
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.100504" elapsed="0.011810"/>
-</kw>
-<kw name="Replace String" owner="String">
-<msg time="2025-08-09T22:56:21.113618" level="INFO">${price_clean} = 122.00
-Ex Tax: 100.00</msg>
-<var>${price_clean}</var>
-<arg>${text}</arg>
-<arg>$</arg>
-<arg>${EMPTY}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.112542" elapsed="0.001125"/>
-</kw>
-<kw name="Replace String" owner="String">
-<msg time="2025-08-09T22:56:21.114795" level="INFO">${price_clean} = 122.00
-Ex Tax: 100.00</msg>
-<var>${price_clean}</var>
-<arg>${price_clean}</arg>
-<arg>,</arg>
-<arg>${EMPTY}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.113856" elapsed="0.000981"/>
-</kw>
-<kw name="Fetch From Left" owner="String">
-<msg time="2025-08-09T22:56:21.115228" level="INFO">${price_clean} = 122.00</msg>
-<var>${price_clean}</var>
-<arg>${price_clean}</arg>
-<arg>\n</arg>
-<doc>Returns contents of the ``string`` before the first occurrence of ``marker``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.115009" elapsed="0.000257"/>
-</kw>
-<kw name="Convert To Number" owner="BuiltIn">
-<msg time="2025-08-09T22:56:21.115660" level="INFO">${num} = 122.0</msg>
-<var>${num}</var>
-<arg>${price_clean}</arg>
-<doc>Converts the given item to a floating point number.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.115423" elapsed="0.000275"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${actual_order}</arg>
-<arg>${num}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.115840" elapsed="0.000191"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="80be69355fad50adc434e102a251034b", element="f.B2A036B19C375002CFFB365EAE4A0F25.d.7692578B01EC88E366873DF0F9913868.e.114")&gt;</var>
-<status status="PASS" start="2025-08-09T22:56:21.100375" elapsed="0.015722"/>
-</iter>
-<var>${element}</var>
-<value>@{elements}</value>
-<status status="PASS" start="2025-08-09T22:56:21.051155" elapsed="0.065174"/>
+<var>${price}</var>
+<value>@{item_prices}</value>
+<status status="NOT RUN" start="2025-08-10T13:04:29.063104" elapsed="0.002629"/>
 </for>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-08-09T22:56:21.117129" level="INFO">${Expected_Order} = [2000.0, 1202.0, 602.0, 122.0]</msg>
-<var>${Expected_Order}</var>
-<arg>sorted(${actual_order}, reverse=True)</arg>
+<msg time="2025-08-10T13:04:29.067001" level="INFO">${Calculated_Total} = 0</msg>
+<var>${Calculated_Total}</var>
+<arg>sum(${price_list})</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.116567" elapsed="0.000610"/>
+<status status="PASS" start="2025-08-10T13:04:29.066147" elapsed="0.000973"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-08-09T22:56:21.117530" level="INFO">[2000.0, 1202.0, 602.0, 122.0]</msg>
-<arg>${actual_order}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.117360" elapsed="0.000216"/>
+<return>
+<value>${Calculated_Total}</value>
+<status status="PASS" start="2025-08-10T13:04:29.067351" elapsed="0.000212"/>
+</return>
+<doc>Retrieves the item price from the cart.</doc>
+<status status="PASS" start="2025-08-10T13:04:19.026380" elapsed="10.041531"/>
 </kw>
-<kw name="Lists Should Be Equal" owner="Collections">
-<arg>${actual_order}</arg>
-<arg>${Expected_Order}</arg>
-<arg>msg=Search results are not sorted as expected.</arg>
-<doc>Fails if given lists are unequal.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.117681" elapsed="0.000236"/>
+<kw name="Get cart total price" owner="cart_page">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<msg time="2025-08-10T13:04:29.192263" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-08-10T13:04:29.192589" level="FAIL">ElementNotInteractableException: Message: element not interactable: [object HTMLTableCellElement] has no size and location
+  (Session info: chrome=138.0.7204.184)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7f4d6e415+77285]
+	GetHandleVerifier [0x0x7ff7f4d6e470+77376]
+	(No symbol) [0x0x7ff7f4b39a6a]
+	(No symbol) [0x0x7ff7f4b41419]
+	(No symbol) [0x0x7ff7f4b444cc]
+	(No symbol) [0x0x7ff7f4b4459f]
+	(No symbol) [0x0x7ff7f4b977a4]
+	(No symbol) [0x0x7ff7f4b969db]
+	(No symbol) [0x0x7ff7f4bec001]
+	(No symbol) [0x0x7ff7f4bb860a]
+	(No symbol) [0x0x7ff7f4be087f]
+	(No symbol) [0x0x7ff7f4bb83e3]
+	(No symbol) [0x0x7ff7f4b81521]
+	(No symbol) [0x0x7ff7f4b822b3]
+	GetHandleVerifier [0x0x7ff7f5051efd+3107021]
+	GetHandleVerifier [0x0x7ff7f504c29d+3083373]
+	GetHandleVerifier [0x0x7ff7f506bedd+3213485]
+	GetHandleVerifier [0x0x7ff7f4d8884e+184862]
+	GetHandleVerifier [0x0x7ff7f4d9055f+216879]
+	GetHandleVerifier [0x0x7ff7f4d77084+113236]
+	GetHandleVerifier [0x0x7ff7f4d77239+113673]
+	GetHandleVerifier [0x0x7ff7f4d5e298+11368]
+	BaseThreadInitThunk [0x0x7fffa318e8d7+23]
+	RtlUserThreadStart [0x0x7fffa507c34c+44]
+</msg>
+<arg>${Total_price_in_cart}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="FAIL" start="2025-08-10T13:04:29.070078" elapsed="0.220818">ElementNotInteractableException: Message: element not interactable: [object HTMLTableCellElement] has no size and location
+  (Session info: chrome=138.0.7204.184)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7f4d6e415+77285]
+	GetHandleVerifier [0x0x7ff7f4d6e470+77376]
+	(No symbol) [0x0x7ff7f4b39a6a]
+	(No symbol) [0x0x7ff7f4b41419]
+	(No symbol) [0x0x7ff7f4b444cc]
+	(No symbol) [0x0x7ff7f4b4459f]
+	(No symbol) [0x0x7ff7f4b977a4]
+	(No symbol) [0x0x7ff7f4b969db]
+	(No symbol) [0x0x7ff7f4bec001]
+	(No symbol) [0x0x7ff7f4bb860a]
+	(No symbol) [0x0x7ff7f4be087f]
+	(No symbol) [0x0x7ff7f4bb83e3]
+	(No symbol) [0x0x7ff7f4b81521]
+	(No symbol) [0x0x7ff7f4b822b3]
+	GetHandleVerifier [0x0x7ff7f5051efd+3107021]
+	GetHandleVerifier [0x0x7ff7f504c29d+3083373]
+	GetHandleVerifier [0x0x7ff7f506bedd+3213485]
+	GetHandleVerifier [0x0x7ff7f4d8884e+184862]
+	GetHandleVerifier [0x0x7ff7f4d9055f+216879]
+	GetHandleVerifier [0x0x7ff7f4d77084+113236]
+	GetHandleVerifier [0x0x7ff7f4d77239+113673]
+	GetHandleVerifier [0x0x7ff7f4d5e298+11368]
+	BaseThreadInitThunk [0x0x7fffa318e8d7+23]
+	RtlUserThreadStart [0x0x7fffa507c34c+44]
+</status>
 </kw>
-<doc>Verifies that the search results are sorted in the expected order.</doc>
-<status status="PASS" start="2025-08-09T22:56:21.022234" elapsed="0.095761"/>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<msg time="2025-08-10T13:04:31.415541" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-08-10T13:04:31.415895" level="FAIL">ElementNotInteractableException: Message: element not interactable: [object HTMLTableCellElement] has no size and location
+  (Session info: chrome=138.0.7204.184)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7f4d6e415+77285]
+	GetHandleVerifier [0x0x7ff7f4d6e470+77376]
+	(No symbol) [0x0x7ff7f4b39a6a]
+	(No symbol) [0x0x7ff7f4b41419]
+	(No symbol) [0x0x7ff7f4b444cc]
+	(No symbol) [0x0x7ff7f4b4459f]
+	(No symbol) [0x0x7ff7f4b977a4]
+	(No symbol) [0x0x7ff7f4b969db]
+	(No symbol) [0x0x7ff7f4bec001]
+	(No symbol) [0x0x7ff7f4bb860a]
+	(No symbol) [0x0x7ff7f4be087f]
+	(No symbol) [0x0x7ff7f4bb83e3]
+	(No symbol) [0x0x7ff7f4b81521]
+	(No symbol) [0x0x7ff7f4b822b3]
+	GetHandleVerifier [0x0x7ff7f5051efd+3107021]
+	GetHandleVerifier [0x0x7ff7f504c29d+3083373]
+	GetHandleVerifier [0x0x7ff7f506bedd+3213485]
+	GetHandleVerifier [0x0x7ff7f4d8884e+184862]
+	GetHandleVerifier [0x0x7ff7f4d9055f+216879]
+	GetHandleVerifier [0x0x7ff7f4d77084+113236]
+	GetHandleVerifier [0x0x7ff7f4d77239+113673]
+	GetHandleVerifier [0x0x7ff7f4d5e298+11368]
+	BaseThreadInitThunk [0x0x7fffa318e8d7+23]
+	RtlUserThreadStart [0x0x7fffa507c34c+44]
+</msg>
+<arg>${Total_price_in_cart}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="FAIL" start="2025-08-10T13:04:31.291744" elapsed="0.126711">ElementNotInteractableException: Message: element not interactable: [object HTMLTableCellElement] has no size and location
+  (Session info: chrome=138.0.7204.184)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7f4d6e415+77285]
+	GetHandleVerifier [0x0x7ff7f4d6e470+77376]
+	(No symbol) [0x0x7ff7f4b39a6a]
+	(No symbol) [0x0x7ff7f4b41419]
+	(No symbol) [0x0x7ff7f4b444cc]
+	(No symbol) [0x0x7ff7f4b4459f]
+	(No symbol) [0x0x7ff7f4b977a4]
+	(No symbol) [0x0x7ff7f4b969db]
+	(No symbol) [0x0x7ff7f4bec001]
+	(No symbol) [0x0x7ff7f4bb860a]
+	(No symbol) [0x0x7ff7f4be087f]
+	(No symbol) [0x0x7ff7f4bb83e3]
+	(No symbol) [0x0x7ff7f4b81521]
+	(No symbol) [0x0x7ff7f4b822b3]
+	GetHandleVerifier [0x0x7ff7f5051efd+3107021]
+	GetHandleVerifier [0x0x7ff7f504c29d+3083373]
+	GetHandleVerifier [0x0x7ff7f506bedd+3213485]
+	GetHandleVerifier [0x0x7ff7f4d8884e+184862]
+	GetHandleVerifier [0x0x7ff7f4d9055f+216879]
+	GetHandleVerifier [0x0x7ff7f4d77084+113236]
+	GetHandleVerifier [0x0x7ff7f4d77239+113673]
+	GetHandleVerifier [0x0x7ff7f4d5e298+11368]
+	BaseThreadInitThunk [0x0x7fffa318e8d7+23]
+	RtlUserThreadStart [0x0x7fffa507c34c+44]
+</status>
 </kw>
-<doc>This test case verifies that the user can filter and sort search results.</doc>
-<status status="PASS" start="2025-08-09T22:56:17.802768" elapsed="3.315690"/>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<msg time="2025-08-10T13:04:33.521786" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-08-10T13:04:33.522151" level="FAIL">ElementNotInteractableException: Message: element not interactable: [object HTMLTableCellElement] has no size and location
+  (Session info: chrome=138.0.7204.184)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7f4d6e415+77285]
+	GetHandleVerifier [0x0x7ff7f4d6e470+77376]
+	(No symbol) [0x0x7ff7f4b39a6a]
+	(No symbol) [0x0x7ff7f4b41419]
+	(No symbol) [0x0x7ff7f4b444cc]
+	(No symbol) [0x0x7ff7f4b4459f]
+	(No symbol) [0x0x7ff7f4b977a4]
+	(No symbol) [0x0x7ff7f4b969db]
+	(No symbol) [0x0x7ff7f4bec001]
+	(No symbol) [0x0x7ff7f4bb860a]
+	(No symbol) [0x0x7ff7f4be087f]
+	(No symbol) [0x0x7ff7f4bb83e3]
+	(No symbol) [0x0x7ff7f4b81521]
+	(No symbol) [0x0x7ff7f4b822b3]
+	GetHandleVerifier [0x0x7ff7f5051efd+3107021]
+	GetHandleVerifier [0x0x7ff7f504c29d+3083373]
+	GetHandleVerifier [0x0x7ff7f506bedd+3213485]
+	GetHandleVerifier [0x0x7ff7f4d8884e+184862]
+	GetHandleVerifier [0x0x7ff7f4d9055f+216879]
+	GetHandleVerifier [0x0x7ff7f4d77084+113236]
+	GetHandleVerifier [0x0x7ff7f4d77239+113673]
+	GetHandleVerifier [0x0x7ff7f4d5e298+11368]
+	BaseThreadInitThunk [0x0x7fffa318e8d7+23]
+	RtlUserThreadStart [0x0x7fffa507c34c+44]
+</msg>
+<arg>${Total_price_in_cart}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="FAIL" start="2025-08-10T13:04:33.419474" elapsed="0.104834">ElementNotInteractableException: Message: element not interactable: [object HTMLTableCellElement] has no size and location
+  (Session info: chrome=138.0.7204.184)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7f4d6e415+77285]
+	GetHandleVerifier [0x0x7ff7f4d6e470+77376]
+	(No symbol) [0x0x7ff7f4b39a6a]
+	(No symbol) [0x0x7ff7f4b41419]
+	(No symbol) [0x0x7ff7f4b444cc]
+	(No symbol) [0x0x7ff7f4b4459f]
+	(No symbol) [0x0x7ff7f4b977a4]
+	(No symbol) [0x0x7ff7f4b969db]
+	(No symbol) [0x0x7ff7f4bec001]
+	(No symbol) [0x0x7ff7f4bb860a]
+	(No symbol) [0x0x7ff7f4be087f]
+	(No symbol) [0x0x7ff7f4bb83e3]
+	(No symbol) [0x0x7ff7f4b81521]
+	(No symbol) [0x0x7ff7f4b822b3]
+	GetHandleVerifier [0x0x7ff7f5051efd+3107021]
+	GetHandleVerifier [0x0x7ff7f504c29d+3083373]
+	GetHandleVerifier [0x0x7ff7f506bedd+3213485]
+	GetHandleVerifier [0x0x7ff7f4d8884e+184862]
+	GetHandleVerifier [0x0x7ff7f4d9055f+216879]
+	GetHandleVerifier [0x0x7ff7f4d77084+113236]
+	GetHandleVerifier [0x0x7ff7f4d77239+113673]
+	GetHandleVerifier [0x0x7ff7f4d5e298+11368]
+	BaseThreadInitThunk [0x0x7fffa318e8d7+23]
+	RtlUserThreadStart [0x0x7fffa507c34c+44]
+</status>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<msg time="2025-08-10T13:04:35.658044" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-08-10T13:04:35.658278" level="FAIL">ElementNotInteractableException: Message: element not interactable: [object HTMLTableCellElement] has no size and location
+  (Session info: chrome=138.0.7204.184)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7f4d6e415+77285]
+	GetHandleVerifier [0x0x7ff7f4d6e470+77376]
+	(No symbol) [0x0x7ff7f4b39a6a]
+	(No symbol) [0x0x7ff7f4b41419]
+	(No symbol) [0x0x7ff7f4b444cc]
+	(No symbol) [0x0x7ff7f4b4459f]
+	(No symbol) [0x0x7ff7f4b977a4]
+	(No symbol) [0x0x7ff7f4b969db]
+	(No symbol) [0x0x7ff7f4bec001]
+	(No symbol) [0x0x7ff7f4bb860a]
+	(No symbol) [0x0x7ff7f4be087f]
+	(No symbol) [0x0x7ff7f4bb83e3]
+	(No symbol) [0x0x7ff7f4b81521]
+	(No symbol) [0x0x7ff7f4b822b3]
+	GetHandleVerifier [0x0x7ff7f5051efd+3107021]
+	GetHandleVerifier [0x0x7ff7f504c29d+3083373]
+	GetHandleVerifier [0x0x7ff7f506bedd+3213485]
+	GetHandleVerifier [0x0x7ff7f4d8884e+184862]
+	GetHandleVerifier [0x0x7ff7f4d9055f+216879]
+	GetHandleVerifier [0x0x7ff7f4d77084+113236]
+	GetHandleVerifier [0x0x7ff7f4d77239+113673]
+	GetHandleVerifier [0x0x7ff7f4d5e298+11368]
+	BaseThreadInitThunk [0x0x7fffa318e8d7+23]
+	RtlUserThreadStart [0x0x7fffa507c34c+44]
+</msg>
+<arg>${Total_price_in_cart}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="FAIL" start="2025-08-10T13:04:35.525192" elapsed="0.134287">ElementNotInteractableException: Message: element not interactable: [object HTMLTableCellElement] has no size and location
+  (Session info: chrome=138.0.7204.184)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7f4d6e415+77285]
+	GetHandleVerifier [0x0x7ff7f4d6e470+77376]
+	(No symbol) [0x0x7ff7f4b39a6a]
+	(No symbol) [0x0x7ff7f4b41419]
+	(No symbol) [0x0x7ff7f4b444cc]
+	(No symbol) [0x0x7ff7f4b4459f]
+	(No symbol) [0x0x7ff7f4b977a4]
+	(No symbol) [0x0x7ff7f4b969db]
+	(No symbol) [0x0x7ff7f4bec001]
+	(No symbol) [0x0x7ff7f4bb860a]
+	(No symbol) [0x0x7ff7f4be087f]
+	(No symbol) [0x0x7ff7f4bb83e3]
+	(No symbol) [0x0x7ff7f4b81521]
+	(No symbol) [0x0x7ff7f4b822b3]
+	GetHandleVerifier [0x0x7ff7f5051efd+3107021]
+	GetHandleVerifier [0x0x7ff7f504c29d+3083373]
+	GetHandleVerifier [0x0x7ff7f506bedd+3213485]
+	GetHandleVerifier [0x0x7ff7f4d8884e+184862]
+	GetHandleVerifier [0x0x7ff7f4d9055f+216879]
+	GetHandleVerifier [0x0x7ff7f4d77084+113236]
+	GetHandleVerifier [0x0x7ff7f4d77239+113673]
+	GetHandleVerifier [0x0x7ff7f4d5e298+11368]
+	BaseThreadInitThunk [0x0x7fffa318e8d7+23]
+	RtlUserThreadStart [0x0x7fffa507c34c+44]
+</status>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<msg time="2025-08-10T13:04:37.813031" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-08-10T13:04:37.813255" level="FAIL">ElementNotInteractableException: Message: element not interactable: [object HTMLTableCellElement] has no size and location
+  (Session info: chrome=138.0.7204.184)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7f4d6e415+77285]
+	GetHandleVerifier [0x0x7ff7f4d6e470+77376]
+	(No symbol) [0x0x7ff7f4b39a6a]
+	(No symbol) [0x0x7ff7f4b41419]
+	(No symbol) [0x0x7ff7f4b444cc]
+	(No symbol) [0x0x7ff7f4b4459f]
+	(No symbol) [0x0x7ff7f4b977a4]
+	(No symbol) [0x0x7ff7f4b969db]
+	(No symbol) [0x0x7ff7f4bec001]
+	(No symbol) [0x0x7ff7f4bb860a]
+	(No symbol) [0x0x7ff7f4be087f]
+	(No symbol) [0x0x7ff7f4bb83e3]
+	(No symbol) [0x0x7ff7f4b81521]
+	(No symbol) [0x0x7ff7f4b822b3]
+	GetHandleVerifier [0x0x7ff7f5051efd+3107021]
+	GetHandleVerifier [0x0x7ff7f504c29d+3083373]
+	GetHandleVerifier [0x0x7ff7f506bedd+3213485]
+	GetHandleVerifier [0x0x7ff7f4d8884e+184862]
+	GetHandleVerifier [0x0x7ff7f4d9055f+216879]
+	GetHandleVerifier [0x0x7ff7f4d77084+113236]
+	GetHandleVerifier [0x0x7ff7f4d77239+113673]
+	GetHandleVerifier [0x0x7ff7f4d5e298+11368]
+	BaseThreadInitThunk [0x0x7fffa318e8d7+23]
+	RtlUserThreadStart [0x0x7fffa507c34c+44]
+</msg>
+<arg>${Total_price_in_cart}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="FAIL" start="2025-08-10T13:04:37.660466" elapsed="0.153935">ElementNotInteractableException: Message: element not interactable: [object HTMLTableCellElement] has no size and location
+  (Session info: chrome=138.0.7204.184)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7f4d6e415+77285]
+	GetHandleVerifier [0x0x7ff7f4d6e470+77376]
+	(No symbol) [0x0x7ff7f4b39a6a]
+	(No symbol) [0x0x7ff7f4b41419]
+	(No symbol) [0x0x7ff7f4b444cc]
+	(No symbol) [0x0x7ff7f4b4459f]
+	(No symbol) [0x0x7ff7f4b977a4]
+	(No symbol) [0x0x7ff7f4b969db]
+	(No symbol) [0x0x7ff7f4bec001]
+	(No symbol) [0x0x7ff7f4bb860a]
+	(No symbol) [0x0x7ff7f4be087f]
+	(No symbol) [0x0x7ff7f4bb83e3]
+	(No symbol) [0x0x7ff7f4b81521]
+	(No symbol) [0x0x7ff7f4b822b3]
+	GetHandleVerifier [0x0x7ff7f5051efd+3107021]
+	GetHandleVerifier [0x0x7ff7f504c29d+3083373]
+	GetHandleVerifier [0x0x7ff7f506bedd+3213485]
+	GetHandleVerifier [0x0x7ff7f4d8884e+184862]
+	GetHandleVerifier [0x0x7ff7f4d9055f+216879]
+	GetHandleVerifier [0x0x7ff7f4d77084+113236]
+	GetHandleVerifier [0x0x7ff7f4d77239+113673]
+	GetHandleVerifier [0x0x7ff7f4d5e298+11368]
+	BaseThreadInitThunk [0x0x7fffa318e8d7+23]
+	RtlUserThreadStart [0x0x7fffa507c34c+44]
+</status>
+</kw>
+<msg time="2025-08-10T13:04:37.814561" level="FAIL">Keyword 'Scroll Element Into View' failed after retrying 5 times. The last error was: ElementNotInteractableException: Message: element not interactable: [object HTMLTableCellElement] has no size and location
+  (Session info: chrome=138.0.7204.184)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7f4d6e415+77285]
+	GetHandleVerifier [0x0x7ff7f4d6e470+77376]
+	(No symbol) [0x0x7ff7f4b39a6a]
+	(No symbol) [0x0x7ff7f4b41419]
+	(No symbol) [0x0x7ff7f4b444cc]
+	(No symbol) [0x0x7ff7f4b4459f]
+	(No symbol) [0x0x7ff7f4b977a4]
+	(No symbol) [0x0x7ff7f4b969db]
+	(No symbol) [0x0x7ff7f4bec001]
+	(No symbol) [0x0x7ff7f4bb860a]
+	(No symbol) [0x0x7ff7f4be087f]
+	(No symbol) [0x0x7ff7f4bb83e3]
+	(No symbol) [0x0x7ff7f4b81521]
+	(No symbol) [0x0x7ff7f4b822b3]
+	GetHandleVerifier [0x0x7ff7f5051efd+3107021]
+	GetHandleVerifier [0x0x7ff7f504c29d+3083373]
+	GetHandleVerifier [0x0x7ff7f506bedd+3213485]
+	GetHandleVerifier [0x0x7ff7f4d8884e+184862]
+	GetHandleVerifier [0x0x7ff7f4d9055f+216879]
+	GetHandleVerifier [0x0x7ff7f4d77084+113236]
+	GetHandleVerifier [0x0x7ff7f4d77239+113673]
+	GetHandleVerifier [0x0x7ff7f4d5e298+11368]
+	BaseThreadInitThunk [0x0x7fffa318e8d7+23]
+	RtlUserThreadStart [0x0x7fffa507c34c+44]
+</msg>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Scroll Element Into View</arg>
+<arg>${Total_price_in_cart}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="FAIL" start="2025-08-10T13:04:29.069507" elapsed="8.746137">Keyword 'Scroll Element Into View' failed after retrying 5 times. The last error was: ElementNotInteractableException: Message: element not interactable: [object HTMLTableCellElement] has no size and location
+  (Session info: chrome=138.0.7204.184)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7f4d6e415+77285]
+	GetHandleVerifier [0x0x7ff7f4d6e470+77376]
+	(No symbol) [0x0x7ff7f4b39a6a]
+	(No symbol) [0x0x7ff7f4b41419]
+	(No symbol) [0x0x7ff7f4b444cc]
+	(No symbol) [0x0x7ff7f4b4459f]
+	(No symbol) [0x0x7ff7f4b977a4]
+	(No symbol) [0x0x7ff7f4b969db]
+	(No symbol) [0x0x7ff7f4bec001]
+	(No symbol) [0x0x7ff7f4bb860a]
+	(No symbol) [0x0x7ff7f4be087f]
+	(No symbol) [0x0x7ff7f4bb83e3]
+	(No symbol) [0x0x7ff7f4b81521]
+	(No symbol) [0x0x7ff7f4b822b3]
+	GetHandleVerifier [0x0x7ff7f5051efd+3107021]
+	GetHandleVerifier [0x0x7ff7f504c29d+3083373]
+	GetHandleVerifier [0x0x7ff7f506bedd+3213485]
+	GetHandleVerifier [0x0x7ff7f4d8884e+184862]
+	GetHandleVerifier [0x0x7ff7f4d9055f+216879]
+	GetHandleVerifier [0x0x7ff7f4d77084+113236]
+	GetHandleVerifier [0x0x7ff7f4d77239+113673]
+	GetHandleVerifier [0x0x7ff7f4d5e298+11368]
+	BaseThreadInitThunk [0x0x7fffa318e8d7+23]
+	RtlUserThreadStart [0x0x7fffa507c34c+44]
+</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Total_price_in_cart}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-08-10T13:04:37.815824" elapsed="0.000033"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<var>${total_price}</var>
+<arg>${Total_price_in_cart}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="NOT RUN" start="2025-08-10T13:04:37.815953" elapsed="0.000020"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${clean_total}</var>
+<arg>${total_price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-08-10T13:04:37.816048" elapsed="0.000021"/>
+</kw>
+<kw name="Replace String" owner="String">
+<var>${clean_total}</var>
+<arg>${clean_total}</arg>
+<arg>$</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="NOT RUN" start="2025-08-10T13:04:37.816142" elapsed="0.000021"/>
+</kw>
+<kw name="Replace String" owner="String">
+<var>${clean_total}</var>
+<arg>${clean_total}</arg>
+<arg>,</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="NOT RUN" start="2025-08-10T13:04:37.816246" elapsed="0.000021"/>
+</kw>
+<kw name="Fetch From Left" owner="String">
+<var>${clean_total}</var>
+<arg>${clean_total}</arg>
+<arg>\n</arg>
+<doc>Returns contents of the ``string`` before the first occurrence of ``marker``.</doc>
+<status status="NOT RUN" start="2025-08-10T13:04:37.816348" elapsed="0.000020"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<var>${total_price_num}</var>
+<arg>${clean_total}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="NOT RUN" start="2025-08-10T13:04:37.816448" elapsed="0.000021"/>
+</kw>
+<return>
+<value>${total_price_num}</value>
+<status status="NOT RUN" start="2025-08-10T13:04:37.816518" elapsed="0.000029"/>
+</return>
+<doc>Retrieves the total price of items in the cart.</doc>
+<status status="FAIL" start="2025-08-10T13:04:29.068854" elapsed="8.747837">Keyword 'Scroll Element Into View' failed after retrying 5 times. The last error was: ElementNotInteractableException: Message: element not interactable: [object HTMLTableCellElement] has no size and location
+  (Session info: chrome=138.0.7204.184)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7f4d6e415+77285]
+	GetHandleVerifier [0x0x7ff7f4d6e470+77376]
+	(No symbol) [0x0x7ff7f4b39a6a]
+	(No symbol) [0x0x7ff7f4b41419]
+	(No symbol) [0x0x7ff7f4b444cc]
+	(No symbol) [0x0x7ff7f4b4459f]
+	(No symbol) [0x0x7ff7f4b977a4]
+	(No symbol) [0x0x7ff7f4b969db]
+	(No symbol) [0x0x7ff7f4bec001]
+	(No symbol) [0x0x7ff7f4bb860a]
+	(No symbol) [0x0x7ff7f4be087f]
+	(No symbol) [0x0x7ff7f4bb83e3]
+	(No symbol) [0x0x7ff7f4b81521]
+	(No symbol) [0x0x7ff7f4b822b3]
+	GetHandleVerifier [0x0x7ff7f5051efd+3107021]
+	GetHandleVerifier [0x0x7ff7f504c29d+3083373]
+	GetHandleVerifier [0x0x7ff7f506bedd+3213485]
+	GetHandleVerifier [0x0x7ff7f4d8884e+184862]
+	GetHandleVerifier [0x0x7ff7f4d9055f+216879]
+	GetHandleVerifier [0x0x7ff7f4d77084+113236]
+	GetHandleVerifier [0x0x7ff7f4d77239+113673]
+	GetHandleVerifier [0x0x7ff7f4d5e298+11368]
+	BaseThreadInitThunk [0x0x7fffa318e8d7+23]
+	RtlUserThreadStart [0x0x7fffa507c34c+44]
+</status>
+</kw>
+<kw name="Verify total price in cart and item price" owner="cart_page">
+<doc>Verifies that the total price in the cart matches the sum of item prices.</doc>
+<status status="NOT RUN" start="2025-08-10T13:04:37.817387" elapsed="0.000054"/>
+</kw>
+<doc>This test case adds multiple products to the cart and verifies the total.</doc>
+<status status="FAIL" start="2025-08-10T13:04:10.182492" elapsed="27.635435">Keyword 'Scroll Element Into View' failed after retrying 5 times. The last error was: ElementNotInteractableException: Message: element not interactable: [object HTMLTableCellElement] has no size and location
+  (Session info: chrome=138.0.7204.184)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7f4d6e415+77285]
+	GetHandleVerifier [0x0x7ff7f4d6e470+77376]
+	(No symbol) [0x0x7ff7f4b39a6a]
+	(No symbol) [0x0x7ff7f4b41419]
+	(No symbol) [0x0x7ff7f4b444cc]
+	(No symbol) [0x0x7ff7f4b4459f]
+	(No symbol) [0x0x7ff7f4b977a4]
+	(No symbol) [0x0x7ff7f4b969db]
+	(No symbol) [0x0x7ff7f4bec001]
+	(No symbol) [0x0x7ff7f4bb860a]
+	(No symbol) [0x0x7ff7f4be087f]
+	(No symbol) [0x0x7ff7f4bb83e3]
+	(No symbol) [0x0x7ff7f4b81521]
+	(No symbol) [0x0x7ff7f4b822b3]
+	GetHandleVerifier [0x0x7ff7f5051efd+3107021]
+	GetHandleVerifier [0x0x7ff7f504c29d+3083373]
+	GetHandleVerifier [0x0x7ff7f506bedd+3213485]
+	GetHandleVerifier [0x0x7ff7f4d8884e+184862]
+	GetHandleVerifier [0x0x7ff7f4d9055f+216879]
+	GetHandleVerifier [0x0x7ff7f4d77084+113236]
+	GetHandleVerifier [0x0x7ff7f4d77239+113673]
+	GetHandleVerifier [0x0x7ff7f4d5e298+11368]
+	BaseThreadInitThunk [0x0x7fffa318e8d7+23]
+	RtlUserThreadStart [0x0x7fffa507c34c+44]
+</status>
 </test>
-<status status="PASS" start="2025-08-09T22:56:17.481220" elapsed="3.638372"/>
+<status status="FAIL" start="2025-08-10T13:04:09.754653" elapsed="28.068287"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="User Should Filter And Sort Search Results Test 11" id="s1" pass="1" fail="0" skip="0">User Should Filter And Sort Search Results Test 11</stat>
+<stat name="Add multiple product to cart and Verify Total Test 12" id="s1" pass="0" fail="1" skip="0">Add multiple product to cart and Verify Total Test 12</stat>
 </suite>
 </statistics>
 <errors>

@@ -5,7 +5,6 @@ Library    String
 Resource    ../variables/variables.robot
 
 *** Keywords ***
-
 Select category
     [Arguments]    ${Category_Name}
     [Documentation]    Selects a category from the Search Page.
