@@ -2,6 +2,8 @@
 Library    SeleniumLibrary
 Resource    ../variables/variables.robot
 
+*** Variables ***
+${Macbook_whishlist}    xpath=//a[normalize-space(text())='MacBook']/ancestor::div[@class='caption']/following-sibling::div[@class='button-group']/button[@type='button' and contains(@onclick, 'wishlist')]
 *** Keywords ***
 Open Home Page
     [Documentation]    Opens the home page of the application.
@@ -52,3 +54,30 @@ Add product to cart by name
     Wait Until Keyword Succeeds    5x    2s    Click Element    ${Search_Button}
     Wait Until Element Is Visible    xpath=//h1[contains(text(), '${Product_Name}')]   10s
     Wait Until Keyword Succeeds    5x    2s    Click Element    xpath=//a[normalize-space(text())='${Product_Name}']/ancestor::div[@class='caption']/following-sibling::div[@class='button-group']/button[@type='button']
+
+Add MacBook to Wishlist
+    [Documentation]    Adds a MacBook to the wishlist and verifies it.
+    Wait Until Keyword Succeeds    5x    2s    Click Element    ${Macbook_whishlist}
+
+Open Wishlist page and verify whishlist page
+    [Documentation]    Opens the wishlist page to view the added products.
+    Wait Until Keyword Succeeds    5x    2s    Click Element    ${Wishlist_button_home_page}
+    ${User_signed_in_req}=    Run Keyword And Return Status    Element Should Contain    ${Wishlist_returning_customer}    Returning Customer
+    IF    ${User_signed_in_req} == True
+        Input Text    ${Wishlist_User_email}    leomessi107@gmail.com
+        Input Text    ${Wishlist_User_password}    Worldcup@2022
+        Wait Until Keyword Succeeds    5x    2s    Click Element    ${Wishlist_login_button}
+    END
+    Wait Until Element Is Visible    ${Wishlist_verify}   10s
+
+Add product to compare
+    [Arguments]    ${Product_Name}
+    [Documentation]    Adds a product to the compare list.
+    Input Text    ${Search_Input_Field}    ${Product_Name}
+    Wait Until Keyword Succeeds    5x    2s    Click Element    ${Search_Button}
+    Wait Until Keyword Succeeds    5x    2s    Click Element    xpath=//a[contains(text(), '${Product_Name}')]/ancestor::div[@class='caption']/following-sibling::div[@class='button-group']/button[3][@type='button']
+
+Go to Compare page
+    [Documentation]    Navigates to the compare page to view compared products.
+    Wait Until Keyword Succeeds    5x    2s    Click Element    xpath=//a[text()='product comparison']
+    

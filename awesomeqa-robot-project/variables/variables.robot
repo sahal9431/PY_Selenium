@@ -1,3 +1,6 @@
+*** Settings ***
+Library    SeleniumLibrary
+Resource    ../pages/home_page.robot
 *** Variables ***
 ${Base_Url}    https://awesomeqa.com/ui/index.php?route=common/home
 ${Browser}    Chrome
@@ -73,3 +76,15 @@ ${Guest_checkout_continue_button}    id=button-guest
 ${Search_catogory_dropdown}    xpath=//select[@name='category_id']
 ${Search_Sort_dropdown}    id=input-sort
 ${Search_price}    css:.price
+
+# Wishlist page variables
+${Wishlist_button_home_page}    xpath=//span[contains(text(), 'Wish List')]
+${Wishlist_returning_customer}    xpath=//h2[contains(text(), 'Returning Customer')]
+${Wishlist_User_email}    id=input-email
+${Wishlist_User_password}    id=input-password
+${Wishlist_login_button}    xpath=//input[@value='Login']
+${Wishlist_verify}    xpath=//h2[contains(text(), 'Wish List')]
+
+#Compare page variables
+${Comparison_page_verify}    xpath=//h1[text()='Product Comparison']
+${Comparison_table}    xpath=//table[@class='table table-bordered']
