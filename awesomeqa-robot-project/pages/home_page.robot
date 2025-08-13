@@ -80,4 +80,37 @@ Add product to compare
 Go to Compare page
     [Documentation]    Navigates to the compare page to view compared products.
     Wait Until Keyword Succeeds    5x    2s    Click Element    xpath=//a[text()='product comparison']
-    
+
+Go to Contact Us page
+    [Documentation]    Navigates to the Contact Us page.
+    Wait Until Keyword Succeeds    5x    2s    Click Element    ${Contact_Us_button}
+
+select currency_dropdown
+    [Documentation]    Selects a currency from the dropdown.
+    Wait Until Element Is Visible    ${Currency_dropdown}   10s
+    Sleep    5s
+    Click Element    ${Currency_dropdown}
+
+select currency option
+    [Arguments]    ${Currency}
+    [Documentation]    Selects a specific currency option from the dropdown.
+    Run Keyword If    '${Currency}' == 'Euro'    Click Element    ${Currency_option_euro}
+    ...  ELSE IF    '${Currency}' == 'Pound'    Click Element    ${Currency_option_pound}
+    ...  ELSE IF    '${Currency}' == 'Dollar'    Click Element    ${Currency_option_dollar}
+    ...  ELSE    Fail    Invalid currency option: ${Currency}
+    Sleep    5s
+
+Verify Currency Change
+    [Arguments]    ${Expected_Currency}    
+    [Documentation]    Verifies that the currency has changed to the expected value.
+    Wait Until Element Is Visible    ${First_product_price}    10s
+    ${price_text}=    Get Text    ${First_product_price}
+    ${first_char}=    Evaluate    """${price_text}"""[0]
+    ${last_char}=     Evaluate    """${price_text}"""[-1]
+    Run Keyword If    '${first_char}' == '${Expected_Currency}'    Should Be Equal    ${first_char}    ${Expected_Currency}
+    ...    ELSE IF    '${last_char}' == '${Expected_Currency}'    Should Be Equal    ${last_char}    ${Expected_Currency}
+    ...    ELSE    Fail    Currency symbol not found at start or end: ${price_text}
+Open Product detailes page from home page
+    [Arguments]    ${Product_Name}
+    [Documentation]    Opens the product details page from the home page.
+    Wait Until Keyword Succeeds    5x    2s    Click Element    xpath=//a[text()='${Product_Name}']

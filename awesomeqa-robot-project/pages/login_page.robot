@@ -23,3 +23,7 @@ Click login Button
 Verify Login Successful
     Wait Until Element Is Visible    ${MY_ACCOUNT_TEXT}    timeout=10s
     Element Should Contain    ${MY_ACCOUNT_TEXT}    My Account
+
+Click on Home button in My Account page
+    [Documentation]    Clicks the Home button in the My Account section.
+    Wait Until Keyword Succeeds    2x    2s    Click Element    ${Home_button_in_my_account}

@@ -1,221 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-08-11T22:11:07.969235" rpa="false" schemaversion="5">
-<suite id="s1" name="Compare two products Test 13" source="D:\PY_Selenium\awesomeqa-robot-project\tests\Compare_two_products_Test_13.robot">
-<test id="s1-t1" name="Compare Two Products" line="7">
+<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-08-13T22:57:31.148243" rpa="false" schemaversion="5">
+<suite id="s1" name="Product review test 16" source="D:\PY_Selenium\awesomeqa-robot-project\tests\Product_review_test_16.robot">
+<test id="s1-t1" name="Product review submission test case" line="8">
 <kw name="Given Open Home Page" owner="home_page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-08-11T22:11:08.262925" level="INFO">Opening browser 'Chrome' to base url 'https://awesomeqa.com/ui/index.php?route=common/home'.</msg>
+<msg time="2025-08-13T22:57:31.499872" level="INFO">Opening browser 'Chrome' to base url 'https://awesomeqa.com/ui/index.php?route=common/home'.</msg>
 <arg>${Base_Url}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-08-11T22:11:08.262638" elapsed="4.319147"/>
+<status status="PASS" start="2025-08-13T22:57:31.499654" elapsed="2.179659"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-08-11T22:11:12.582055" elapsed="0.022534"/>
+<status status="PASS" start="2025-08-13T22:57:33.679754" elapsed="0.030580"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-08-11T22:11:12.604860" elapsed="0.001147"/>
+<status status="PASS" start="2025-08-13T22:57:33.710621" elapsed="0.001344"/>
 </kw>
 <doc>Opens the home page of the application.</doc>
-<status status="PASS" start="2025-08-11T22:11:08.261812" elapsed="4.344310"/>
+<status status="PASS" start="2025-08-13T22:57:31.498912" elapsed="2.213178"/>
 </kw>
 <kw name="And Verify Home Page Title" owner="home_page">
 <kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2025-08-11T22:11:12.612091" level="INFO">${title} = Your Store</msg>
+<msg time="2025-08-13T22:57:33.720114" level="INFO">${title} = Your Store</msg>
 <var>${title}</var>
 <doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-08-11T22:11:12.606964" elapsed="0.005183"/>
+<status status="PASS" start="2025-08-13T22:57:33.712843" elapsed="0.007328"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${title}</arg>
 <arg>${Expected_Home_Page_Title}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-08-11T22:11:12.612305" elapsed="0.000240"/>
+<status status="PASS" start="2025-08-13T22:57:33.720337" elapsed="0.000251"/>
 </kw>
 <arg>Your Store</arg>
 <doc>Verifies that the home page title is correct.</doc>
-<status status="PASS" start="2025-08-11T22:11:12.606598" elapsed="0.006032"/>
+<status status="PASS" start="2025-08-13T22:57:33.712523" elapsed="0.008148"/>
 </kw>
-<kw name="When Add product to compare" owner="home_page">
+<kw name="When Open Login Page" owner="login_page">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${My_Account_Button}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-08-13T22:57:33.721199" elapsed="0.029051"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-13T22:57:33.750704" level="INFO">Clicking element 'xpath=//a[@title='My Account']'.</msg>
+<arg>${My_Account_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-13T22:57:33.750461" elapsed="0.083284"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Login_Button_home}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-08-13T22:57:33.834033" elapsed="0.010802"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-13T22:57:33.845458" level="INFO">Clicking element 'xpath=//a[text()='Login']'.</msg>
+<arg>${Login_Button_home}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-13T22:57:33.845096" elapsed="0.223098"/>
+</kw>
+<doc>Opens the login page of the application.</doc>
+<status status="PASS" start="2025-08-13T22:57:33.720975" elapsed="0.347486"/>
+</kw>
+<kw name="And Enter Login Credentials" owner="login_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-11T22:11:12.614822" level="INFO">Typing text 'MacBook' into text field 'xpath=//input[@name='search']'.</msg>
-<arg>${Search_Input_Field}</arg>
-<arg>${Product_Name}</arg>
+<msg time="2025-08-13T22:57:34.071245" level="INFO">Typing text 'leomessi107@gmail.com' into text field 'name=email'.</msg>
+<arg>${Input_Email_login_page}</arg>
+<arg>${VALID_EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-11T22:11:12.613630" elapsed="0.128756"/>
+<status status="PASS" start="2025-08-13T22:57:34.070642" elapsed="0.156246"/>
 </kw>
-<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-11T22:11:12.743171" level="INFO">Clicking element 'xpath=//button[@class='btn btn-default btn-lg']'.</msg>
-<arg>${Search_Button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-11T22:11:12.742880" elapsed="0.444254"/>
-</kw>
-<arg>5x</arg>
-<arg>2s</arg>
-<arg>Click Element</arg>
-<arg>${Search_Button}</arg>
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-08-11T22:11:12.742613" elapsed="0.444672"/>
-</kw>
-<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-11T22:11:13.188475" level="INFO">Clicking element 'xpath=//a[contains(text(), 'MacBook')]/ancestor::div[@class='caption']/following-sibling::div[@class='button-group']/button[3][@type='button']'.</msg>
-<arg>xpath=//a[contains(text(), '${Product_Name}')]/ancestor::div[@class='caption']/following-sibling::div[@class='button-group']/button[3][@type='button']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-11T22:11:13.187976" elapsed="0.068377"/>
-</kw>
-<arg>5x</arg>
-<arg>2s</arg>
-<arg>Click Element</arg>
-<arg>xpath=//a[contains(text(), '${Product_Name}')]/ancestor::div[@class='caption']/following-sibling::div[@class='button-group']/button[3][@type='button']</arg>
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-08-11T22:11:13.187521" elapsed="0.069012"/>
-</kw>
-<arg>MacBook</arg>
-<doc>Adds a product to the compare list.</doc>
-<status status="PASS" start="2025-08-11T22:11:12.613161" elapsed="0.643459"/>
-</kw>
-<kw name="And Add product to compare" owner="home_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-11T22:11:13.257549" level="INFO">Typing text 'iPhone' into text field 'xpath=//input[@name='search']'.</msg>
-<arg>${Search_Input_Field}</arg>
-<arg>${Product_Name}</arg>
+<msg time="2025-08-13T22:57:34.227936" level="INFO">Typing text 'Worldcup2022' into text field 'name=password'.</msg>
+<arg>${Input_Password_login_page}</arg>
+<arg>${VALID_PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-11T22:11:13.257349" elapsed="0.068968"/>
+<status status="PASS" start="2025-08-13T22:57:34.227481" elapsed="0.096863"/>
 </kw>
-<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-11T22:11:13.328871" level="INFO">Clicking element 'xpath=//button[@class='btn btn-default btn-lg']'.</msg>
-<arg>${Search_Button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-11T22:11:13.327937" elapsed="0.490508"/>
+<doc>Enters the login credentials into the login form.</doc>
+<status status="PASS" start="2025-08-13T22:57:34.069991" elapsed="0.254468"/>
 </kw>
-<arg>5x</arg>
-<arg>2s</arg>
-<arg>Click Element</arg>
-<arg>${Search_Button}</arg>
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-08-11T22:11:13.326577" elapsed="0.491985"/>
+<kw name="And Click login Button" owner="login_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-08-13T22:57:34.325489" level="INFO">Clicking button 'xpath=//input[@value='Login']'.</msg>
+<arg>xpath=${Login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-13T22:57:34.325232" elapsed="0.080701"/>
 </kw>
-<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-11T22:11:13.819260" level="INFO">Clicking element 'xpath=//a[contains(text(), 'iPhone')]/ancestor::div[@class='caption']/following-sibling::div[@class='button-group']/button[3][@type='button']'.</msg>
-<arg>xpath=//a[contains(text(), '${Product_Name}')]/ancestor::div[@class='caption']/following-sibling::div[@class='button-group']/button[3][@type='button']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-11T22:11:13.818949" elapsed="0.051172"/>
+<doc>Clicks the login button to submit the login form.</doc>
+<status status="PASS" start="2025-08-13T22:57:34.324927" elapsed="0.081131"/>
 </kw>
-<arg>5x</arg>
-<arg>2s</arg>
-<arg>Click Element</arg>
-<arg>xpath=//a[contains(text(), '${Product_Name}')]/ancestor::div[@class='caption']/following-sibling::div[@class='button-group']/button[3][@type='button']</arg>
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-08-11T22:11:13.818723" elapsed="0.051503"/>
-</kw>
-<arg>iPhone</arg>
-<doc>Adds a product to the compare list.</doc>
-<status status="PASS" start="2025-08-11T22:11:13.257063" elapsed="0.613237"/>
-</kw>
-<kw name="And Go to Compare page" owner="home_page">
-<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-11T22:11:13.871441" level="INFO">Clicking element 'xpath=//a[text()='product comparison']'.</msg>
-<arg>xpath=//a[text()='product comparison']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-11T22:11:13.871209" elapsed="0.818932"/>
-</kw>
-<arg>5x</arg>
-<arg>2s</arg>
-<arg>Click Element</arg>
-<arg>xpath=//a[text()='product comparison']</arg>
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-08-11T22:11:13.871021" elapsed="0.819258"/>
-</kw>
-<doc>Navigates to the compare page to view compared products.</doc>
-<status status="PASS" start="2025-08-11T22:11:13.870714" elapsed="0.819674"/>
-</kw>
-<kw name="And Verify Comparison page" owner="comparison_page">
+<kw name="Then Verify Login Successful" owner="login_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Comparison_page_verify}</arg>
-<arg>10s</arg>
+<msg time="2025-08-13T22:57:44.895313" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-08-13T22:57:44.895643" level="FAIL">Element 'xpath=//h2[text()='My Account']' not visible after 10 seconds.</msg>
+<arg>${MY_ACCOUNT_TEXT}</arg>
+<arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-11T22:11:14.691058" elapsed="0.133064"/>
+<status status="FAIL" start="2025-08-13T22:57:34.407018" elapsed="10.497282">Element 'xpath=//h2[text()='My Account']' not visible after 10 seconds.</status>
 </kw>
-<doc>Verifies the comparison page after adding products to compare.</doc>
-<status status="PASS" start="2025-08-11T22:11:14.690791" elapsed="0.133440"/>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>${MY_ACCOUNT_TEXT}</arg>
+<arg>My Account</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2025-08-13T22:57:44.904951" elapsed="0.000146"/>
 </kw>
-<kw name="And Verify Products in Comparison" owner="comparison_page">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Comparison_table}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-11T22:11:14.825026" elapsed="0.016771"/>
+<status status="FAIL" start="2025-08-13T22:57:34.406614" elapsed="10.498951">Element 'xpath=//h2[text()='My Account']' not visible after 10 seconds.</status>
 </kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-08-11T22:11:14.870088" level="INFO">${Table_text} = Product Details
-Product MacBook iPhone
-Image
-Price $602.00 $123.20
-Model Product 16 product 11
-Brand Apple Apple
-Availability In Stock Out Of Stock
-Rating
-
-Based on 0 reviews.
-
-Based on 0 reviews.
-Sum...</msg>
-<var>${Table_text}</var>
-<arg>${Comparison_table}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-11T22:11:14.841966" elapsed="0.028170"/>
+<kw name="And Click on Home button in My Account page" owner="login_page">
+<doc>Clicks the Home button in the My Account section.</doc>
+<status status="NOT RUN" start="2025-08-13T22:57:44.906874" elapsed="0.000154"/>
 </kw>
-<for flavor="IN">
-<iter>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${Table_text}</arg>
-<arg>${element}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-08-11T22:11:14.870505" elapsed="0.000146"/>
-</kw>
-<var name="${element}">MacBook</var>
-<status status="PASS" start="2025-08-11T22:11:14.870398" elapsed="0.000294"/>
-</iter>
-<iter>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${Table_text}</arg>
-<arg>${element}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-08-11T22:11:14.870867" elapsed="0.000134"/>
-</kw>
-<var name="${element}">iPhone</var>
-<status status="PASS" start="2025-08-11T22:11:14.870786" elapsed="0.000258"/>
-</iter>
-<var>${element}</var>
-<value>@{Product}</value>
-<status status="PASS" start="2025-08-11T22:11:14.870230" elapsed="0.000858"/>
-</for>
+<kw name="And Open Product detailes page from home page" owner="home_page">
 <arg>MacBook</arg>
-<arg>iPhone</arg>
-<doc>Verifies that the specified product is present in the comparison page.</doc>
-<status status="PASS" start="2025-08-11T22:11:14.824746" elapsed="0.046430"/>
+<doc>Opens the product details page from the home page.</doc>
+<status status="NOT RUN" start="2025-08-13T22:57:44.907893" elapsed="0.000068"/>
 </kw>
-<doc>Compares two products and verifies the comparison page.</doc>
-<status status="PASS" start="2025-08-11T22:11:08.260912" elapsed="6.610649"/>
+<kw name="And Select review tab" owner="Product_details_page">
+<doc>Selects the review tab on the product details page.</doc>
+<status status="NOT RUN" start="2025-08-13T22:57:44.908268" elapsed="0.000035"/>
+</kw>
+<kw name="And Enter review details" owner="Product_details_page">
+<arg>John Doe</arg>
+<arg>3</arg>
+<doc>Enters the review details into the review form.</doc>
+<status status="NOT RUN" start="2025-08-13T22:57:44.909149" elapsed="0.000169"/>
+</kw>
+<kw name="And Verify review submission" owner="Product_details_page">
+<doc>Verifies that the review submission was successful.</doc>
+<status status="NOT RUN" start="2025-08-13T22:57:44.912751" elapsed="0.000108"/>
+</kw>
+<doc>This test case verifies the product review submission functionality.</doc>
+<status status="FAIL" start="2025-08-13T22:57:31.497701" elapsed="13.416424">Element 'xpath=//h2[text()='My Account']' not visible after 10 seconds.</status>
 </test>
-<status status="PASS" start="2025-08-11T22:11:07.971161" elapsed="6.901009"/>
+<status status="FAIL" start="2025-08-13T22:57:31.149891" elapsed="13.766735"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Compare two products Test 13" id="s1" pass="1" fail="0" skip="0">Compare two products Test 13</stat>
+<stat name="Product review test 16" id="s1" pass="0" fail="1" skip="0">Product review test 16</stat>
 </suite>
 </statistics>
 <errors>

@@ -2,12 +2,13 @@
 Library    SeleniumLibrary
 Resource    ../pages/home_page.robot
 *** Variables ***
+# robot -d results .\tests\Compare_two_products_Test_13.robot      
 ${Base_Url}    https://awesomeqa.com/ui/index.php?route=common/home
 ${Browser}    Chrome
 
 #Login page variables
-${VALID_EMAIL}    testuser@awesomeqa.com
-${VALID_PASSWORD}    test123
+${VALID_EMAIL}    leomessi107@gmail.com
+${VALID_PASSWORD}    Worldcup2022
 ${My_Account_Button}    xpath=//a[@title='My Account']
 ${Login_Button_home}    xpath=//a[text()='Login']
 ${Register_Button}    xpath=//a[text()='Register']
@@ -15,6 +16,7 @@ ${Input_Email_login_page}    name=email
 ${Input_Password_login_page}    name=password
 ${Login_button}    //input[@value='Login']
 ${MY_ACCOUNT_TEXT}  xpath=//h2[text()='My Account']
+${Home_button_in_my_account}    xpath=//i[@class='fa fa-home']
 
 #Register page variables
 ${First_name}    Leo
@@ -88,3 +90,28 @@ ${Wishlist_verify}    xpath=//h2[contains(text(), 'Wish List')]
 #Compare page variables
 ${Comparison_page_verify}    xpath=//h1[text()='Product Comparison']
 ${Comparison_table}    xpath=//table[@class='table table-bordered']
+
+#Contack Us page variables
+${Contact_Us_button}    xpath=//a[contains(text(), 'Contact Us')]
+${Contact_Us_page_heading}    xpath=//h1[text()='Contact Us']
+${Contact_Us_name_field}    id=input-name
+${Contact_Us_email_field}    id=input-email
+${Contact_Us_enquiry_field}    id=input-enquiry
+${Contact_Us_submit_button}    xpath=//input[@value='Submit']
+${Contact_Us_success_message}    xpath=//p[text()='Your enquiry has been successfully sent to the store owner!']
+
+#currency variables
+${Currency_dropdown}    xpath=//form[@id='form-currency']//button
+${Currency_option_euro}    xpath=//button[@name='EUR']
+${Currency_option_pound}    xpath=//button[@name='GBP']
+${Currency_option_dollar}    xpath=//button[@name='USD']
+${First_product_price}    xpath=//*[@id="content"]/div[2]/div[1]/div/div[2]/p[2]
+
+#Product details page variables
+${Details_page_review_tab}    xpath=//a[@href='#tab-review']
+${Review_Input_name}    id=input-name
+${Review_Input_review}    id=input-review
+${Review_Rating}    xpath=//input[@name='rating' and @value='3']
+${Review_Submit_button}    id=button-review
+${Review_Success_message}    xpath=//div[@class='alert alert-success alert-dismissible']
+${Review_input}     Thank you for your review. It has been submitted to the webmaster for approval. Thank you for your review. It has been submitted to the webmaster for approval.

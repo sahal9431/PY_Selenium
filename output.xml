@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-08-13T19:43:10.254763" rpa="false" schemaversion="5">
+<suite id="s1" name="ContactUs test 14" source="d:\PY_Selenium\awesomeqa-robot-project\tests\ContactUs_test_14.robot">
+<test id="s1-t1" name="Contact Us Test Case" line="8">
+<kw name="Given Open Home Page" owner="home_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-13T19:43:10.798387" level="INFO">Opening browser 'Chrome' to base url 'https://awesomeqa.com/ui/index.php?route=common/home'.</msg>
+<arg>${Base_Url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-13T19:43:10.798078" elapsed="4.178131"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-13T19:43:14.976789" elapsed="0.040368"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-08-13T19:43:15.017588" elapsed="0.002260"/>
+</kw>
+<doc>Opens the home page of the application.</doc>
+<status status="PASS" start="2025-08-13T19:43:10.796903" elapsed="4.223297"/>
+</kw>
+<kw name="Then Verify Home Page Title" owner="home_page">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-08-13T19:43:15.030891" level="INFO">${title} = Your Store</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-08-13T19:43:15.024093" elapsed="0.007224"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${title}</arg>
+<arg>${Expected_Home_Page_Title}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-08-13T19:43:15.031657" elapsed="0.000482"/>
+</kw>
+<arg>Your Store</arg>
+<doc>Verifies that the home page title is correct.</doc>
+<status status="PASS" start="2025-08-13T19:43:15.023309" elapsed="0.008980"/>
+</kw>
+<kw name="When Go to Contact Us page" owner="home_page">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-13T19:43:15.033771" level="INFO">Clicking element 'xpath=//a[contains(text(), 'Contact Us')]'.</msg>
+<arg>${Contact_Us_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-13T19:43:15.033376" elapsed="0.259674"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${Contact_Us_button}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-08-13T19:43:15.033078" elapsed="0.260173"/>
+</kw>
+<doc>Navigates to the Contact Us page.</doc>
+<status status="PASS" start="2025-08-13T19:43:15.032738" elapsed="0.260645"/>
+</kw>
+<kw name="And Verify Contact Us Page" owner="Contactus_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Contact_Us_page_heading}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-13T19:43:15.294634" elapsed="0.129018"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-13T19:43:15.443903" level="INFO">Element 'xpath=//h1[text()='Contact Us']' contains text 'Contact Us'.</msg>
+<arg>${Contact_Us_page_heading}</arg>
+<arg>Contact Us</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-13T19:43:15.424215" elapsed="0.020363"/>
+</kw>
+<doc>Verifies that the Contact Us page is displayed correctly.</doc>
+<status status="PASS" start="2025-08-13T19:43:15.294083" elapsed="0.150762"/>
+</kw>
+<kw name="Then Enter Contact Details" owner="Contactus_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-13T19:43:15.448764" level="INFO">Typing text 'Leo' into text field 'id=input-name'.</msg>
+<arg>${Contact_Us_Name_Field}</arg>
+<arg>${Name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-13T19:43:15.446901" elapsed="0.101457"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-13T19:43:15.549394" level="INFO">Typing text 'testuser@awesomeqa.com' into text field 'id=input-email'.</msg>
+<arg>${Contact_Us_Email_Field}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-13T19:43:15.548918" elapsed="0.095499"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-13T19:43:15.645179" level="INFO">Typing text 'God bless you' into text field 'id=input-enquiry'.</msg>
+<arg>${Contact_Us_Enquiry_Field}</arg>
+<arg>${Enquiry}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-13T19:43:15.644756" elapsed="0.082211"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-13T19:43:15.727772" level="INFO">Clicking element 'xpath=//input[@value='Submit']'.</msg>
+<arg>${Contact_Us_Submit_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-13T19:43:15.727357" elapsed="0.088471"/>
+</kw>
+<arg>${First_name}</arg>
+<arg>${VALID_EMAIL}</arg>
+<arg>God bless you</arg>
+<doc>Fills in the contact form with the provided details.</doc>
+<status status="PASS" start="2025-08-13T19:43:15.445778" elapsed="0.370966"/>
+</kw>
+<kw name="And Verify Contact Us Form Submission" owner="Contactus_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Contact_Us_Success_Message}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-13T19:43:15.818185" elapsed="0.323740"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-13T19:43:16.157312" level="INFO">Element 'xpath=//p[text()='Your enquiry has been successfully sent to the store owner!']' contains text 'Your enquiry has been successfully sent to the store owner!'.</msg>
+<arg>${Contact_Us_Success_Message}</arg>
+<arg>Your enquiry has been successfully sent to the store owner!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-13T19:43:16.142295" elapsed="0.015253"/>
+</kw>
+<doc>Verifies that the contact form submission was successful.</doc>
+<status status="PASS" start="2025-08-13T19:43:15.817554" elapsed="0.340132"/>
+</kw>
+<doc>This test case verifies the Contact Us functionality.</doc>
+<status status="PASS" start="2025-08-13T19:43:10.796062" elapsed="5.362001"/>
+</test>
+<status status="PASS" start="2025-08-13T19:43:10.275776" elapsed="5.883274"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="ContactUs test 14" id="s1" pass="1" fail="0" skip="0">ContactUs test 14</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
