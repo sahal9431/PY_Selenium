@@ -27,3 +27,8 @@ Verify Login Successful
 Click on Home button in My Account page
     [Documentation]    Clicks the Home button in the My Account section.
     Wait Until Keyword Succeeds    2x    2s    Click Element    ${Home_button_in_my_account}
+
+Select newsletter option
+    [Documentation]    Selects the newsletter option and verifies the success message.
+    Wait Until Keyword Succeeds    5x    2s    Click Element    ${Newsletter_button}
+    Wait Until Element Is Visible    ${Newletter_page_heading}    timeout=10s

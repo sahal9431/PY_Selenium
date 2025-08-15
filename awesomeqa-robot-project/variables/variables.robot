@@ -8,7 +8,7 @@ ${Browser}    Chrome
 
 #Login page variables
 ${VALID_EMAIL}    leomessi107@gmail.com
-${VALID_PASSWORD}    Worldcup2022
+${VALID_PASSWORD}    Worldcup@2022
 ${My_Account_Button}    xpath=//a[@title='My Account']
 ${Login_Button_home}    xpath=//a[text()='Login']
 ${Register_Button}    xpath=//a[text()='Register']
@@ -115,3 +115,11 @@ ${Review_Rating}    xpath=//input[@name='rating' and @value='3']
 ${Review_Submit_button}    id=button-review
 ${Review_Success_message}    xpath=//div[@class='alert alert-success alert-dismissible']
 ${Review_input}     Thank you for your review. It has been submitted to the webmaster for approval. Thank you for your review. It has been submitted to the webmaster for approval.
+
+#Newsletter variables
+${Newsletter_button}    xpath=//a[text()='Newsletter']
+${Newletter_page_heading}    xpath=//h1[text()='Newsletter Subscription']
+${Newsletter_yes_radio_button}    xpath=//input[@type='radio'and @value='1']
+${Newsletter_no_radio_button}    xpath=//input[@type='radio'and @value='0']
+${Newsletter_continue_button}    xpath=//input[@value='Continue']
+${Newsletter_success_message}    xpath=//div[@class='alert alert-success alert-dismissible']
