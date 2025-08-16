@@ -1,283 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-08-15T10:36:11.104714" rpa="false" schemaversion="5">
-<suite id="s1" name="Subscribe and Unsubscribe news letter Test 17" source="D:\PY_Selenium\awesomeqa-robot-project\tests\Subscribe_and_Unsubscribe_news_letter_Test_17.robot">
-<kw name="Suite Setup for login page" owner="Suite_setup_and_teardown" type="SETUP">
-<kw name="Suite Setup for home page" owner="Suite_setup_and_teardown">
-<kw name="Open Home Page" owner="home_page">
+<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-08-16T19:19:08.791781" rpa="false" schemaversion="5">
+<suite id="s1" name="View product in cart Test 6" source="D:\PY_Selenium\awesomeqa-robot-project\tests\View_product_in_cart_Test_6.robot">
+<test id="s1-t1" name="View Product In Cart Test" line="7">
+<kw name="Given Open Home Page" owner="home_page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-08-15T10:36:12.086737" level="INFO">Opening browser 'Chrome' to base url 'https://awesomeqa.com/ui/index.php?route=common/home'.</msg>
+<msg time="2025-08-16T19:19:09.123264" level="INFO">Opening browser 'Chrome' to base url 'https://awesomeqa.com/ui/index.php?route=common/home'.</msg>
 <arg>${Base_Url}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-08-15T10:36:12.086229" elapsed="3.351821"/>
+<status status="PASS" start="2025-08-16T19:19:09.123039" elapsed="2.311654"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-08-15T10:36:15.438553" elapsed="0.546686"/>
+<status status="PASS" start="2025-08-16T19:19:11.434953" elapsed="0.027568"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2025-08-15T10:36:15.985915" elapsed="0.004186"/>
+<status status="PASS" start="2025-08-16T19:19:11.463454" elapsed="0.002313"/>
 </kw>
 <doc>Opens the home page of the application.</doc>
-<status status="PASS" start="2025-08-15T10:36:12.084995" elapsed="3.905383"/>
+<status status="PASS" start="2025-08-16T19:19:09.122360" elapsed="2.343533"/>
 </kw>
-<kw name="Verify Home Page Title" owner="home_page">
+<kw name="And Verify Home Page Title" owner="home_page">
 <kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2025-08-15T10:36:16.017873" level="INFO">${title} = Your Store</msg>
+<msg time="2025-08-16T19:19:11.471725" level="INFO">${title} = Your Store</msg>
 <var>${title}</var>
 <doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-08-15T10:36:15.991951" elapsed="0.026043"/>
+<status status="PASS" start="2025-08-16T19:19:11.466762" elapsed="0.005023"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${title}</arg>
 <arg>${Expected_Home_Page_Title}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-08-15T10:36:16.018359" elapsed="0.000601"/>
+<status status="PASS" start="2025-08-16T19:19:11.471942" elapsed="0.000222"/>
 </kw>
 <arg>Your Store</arg>
 <doc>Verifies that the home page title is correct.</doc>
-<status status="PASS" start="2025-08-15T10:36:15.991331" elapsed="0.027831"/>
+<status status="PASS" start="2025-08-16T19:19:11.466346" elapsed="0.005899"/>
 </kw>
-<doc>Opens the home page and verifies the title.</doc>
-<status status="PASS" start="2025-08-15T10:36:12.084513" elapsed="3.934786"/>
-</kw>
-<kw name="Open Login Page" owner="login_page">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${My_Account_Button}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-08-15T10:36:16.020167" elapsed="0.038777"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-15T10:36:16.059904" level="INFO">Clicking element 'xpath=//a[@title='My Account']'.</msg>
-<arg>${My_Account_Button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-15T10:36:16.059333" elapsed="0.334529"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${Login_Button_home}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-08-15T10:36:16.394432" elapsed="0.042924"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-15T10:36:16.438711" level="INFO">Clicking element 'xpath=//a[text()='Login']'.</msg>
-<arg>${Login_Button_home}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-15T10:36:16.438181" elapsed="0.335150"/>
-</kw>
-<doc>Opens the login page of the application.</doc>
-<status status="PASS" start="2025-08-15T10:36:16.019669" elapsed="0.753945"/>
-</kw>
-<kw name="Enter Login Credentials" owner="login_page">
+<kw name="And Search for product" owner="home_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-15T10:36:16.778778" level="INFO">Typing text 'leomessi107@gmail.com' into text field 'name=email'.</msg>
-<arg>${Input_Email_login_page}</arg>
-<arg>${VALID_EMAIL}</arg>
+<msg time="2025-08-16T19:19:11.473060" level="INFO">Typing text 'MacBook' into text field 'xpath=//input[@name='search']'.</msg>
+<arg>${Search_Input_Field}</arg>
+<arg>${Product_Name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-15T10:36:16.778218" elapsed="0.485504"/>
+<status status="PASS" start="2025-08-16T19:19:11.472748" elapsed="0.117041"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-15T10:36:17.264860" level="INFO">Typing text 'Worldcup@2022' into text field 'name=password'.</msg>
-<arg>${Input_Password_login_page}</arg>
-<arg>${VALID_PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-15T10:36:17.264244" elapsed="0.411573"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-16T19:19:11.590513" level="INFO">Clicking element 'xpath=//button[@class='btn btn-default btn-lg']'.</msg>
+<arg>${Search_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-16T19:19:11.590088" elapsed="0.350128"/>
 </kw>
-<doc>Enters the login credentials into the login form.</doc>
-<status status="PASS" start="2025-08-15T10:36:16.777701" elapsed="0.898477"/>
+<arg>MacBook</arg>
+<doc>Searches for a product on the home page.</doc>
+<status status="PASS" start="2025-08-16T19:19:11.472510" elapsed="0.467897"/>
 </kw>
-<kw name="Click login Button" owner="login_page">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-08-15T10:36:17.678245" level="INFO">Clicking button 'xpath=//input[@value='Login']'.</msg>
-<arg>xpath=${Login_button}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-15T10:36:17.677276" elapsed="0.595431"/>
-</kw>
-<doc>Clicks the login button to submit the login form.</doc>
-<status status="PASS" start="2025-08-15T10:36:17.676638" elapsed="0.596311"/>
-</kw>
-<kw name="Verify Login Successful" owner="login_page">
+<kw name="And Verify Search Result" owner="home_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${MY_ACCOUNT_TEXT}</arg>
-<arg>timeout=10s</arg>
+<arg>${Search_Result_heading}</arg>
+<arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-15T10:36:18.273689" elapsed="0.071174"/>
+<status status="PASS" start="2025-08-16T19:19:11.941365" elapsed="0.030472"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-15T10:36:18.432713" level="INFO">Element 'xpath=//h2[text()='My Account']' contains text 'My Account'.</msg>
-<arg>${MY_ACCOUNT_TEXT}</arg>
-<arg>My Account</arg>
+<msg time="2025-08-16T19:19:12.009092" level="INFO">Element 'xpath=//h1[contains(text(), 'Search')]' contains text 'Search'.</msg>
+<arg>${Search_Result_heading}</arg>
+<arg>Search</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-15T10:36:18.345864" elapsed="0.087078"/>
+<status status="PASS" start="2025-08-16T19:19:11.972132" elapsed="0.037053"/>
 </kw>
-<status status="PASS" start="2025-08-15T10:36:18.273301" elapsed="0.160075"/>
+<doc>Verifies that the search result matches the expected result.</doc>
+<status status="PASS" start="2025-08-16T19:19:11.940922" elapsed="0.068371"/>
 </kw>
-<doc>Opens the login page and logs in with valid credentials.</doc>
-<status status="PASS" start="2025-08-15T10:36:12.083876" elapsed="6.349703"/>
+<kw name="And Add product to cart" owner="home_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Add_macbook to carrt}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-16T19:19:12.010104" elapsed="0.015512"/>
 </kw>
-<test id="s1-t1" name="Subscribe to newsletter" line="12">
-<kw name="Given Select newsletter option" owner="login_page">
-<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-15T10:36:18.439539" level="INFO">Clicking element 'xpath=//a[text()='Newsletter']'.</msg>
-<arg>${Newsletter_button}</arg>
+<msg time="2025-08-16T19:19:12.026129" level="INFO">Clicking element 'xpath=//*[@id="content"]/div[3]/div[1]/div/div[2]/div[2]/button[1]'.</msg>
+<arg>${Add_macbook to carrt}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-15T10:36:18.438921" elapsed="0.466400"/>
-</kw>
-<arg>5x</arg>
-<arg>2s</arg>
-<arg>Click Element</arg>
-<arg>${Newsletter_button}</arg>
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-08-15T10:36:18.438460" elapsed="0.467120"/>
+<status status="PASS" start="2025-08-16T19:19:12.025801" elapsed="0.072792"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Newletter_page_heading}</arg>
-<arg>timeout=10s</arg>
+<arg>${SUCCESS_MESSAGE_ADD_TO_CART}</arg>
+<arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-15T10:36:18.905926" elapsed="0.084898"/>
-</kw>
-<doc>Selects the newsletter option and verifies the success message.</doc>
-<status status="PASS" start="2025-08-15T10:36:18.437794" elapsed="0.553809"/>
-</kw>
-<kw name="And User Subscribes to Newsletter" owner="newsletter_page">
-<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-15T10:36:18.996675" level="INFO">Clicking element 'xpath=//input[@type='radio'and @value='1']'.</msg>
-<arg>${Newsletter_yes_radio_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-15T10:36:18.996150" elapsed="0.168559"/>
-</kw>
-<arg>5x</arg>
-<arg>2s</arg>
-<arg>Click Element</arg>
-<arg>${Newsletter_yes_radio_button}</arg>
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-08-15T10:36:18.995631" elapsed="0.169311"/>
-</kw>
-<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-15T10:36:19.166597" level="INFO">Clicking element 'xpath=//input[@value='Continue']'.</msg>
-<arg>${Newsletter_continue_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-15T10:36:19.166162" elapsed="0.305440"/>
-</kw>
-<arg>5x</arg>
-<arg>2s</arg>
-<arg>Click Element</arg>
-<arg>${Newsletter_continue_button}</arg>
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-08-15T10:36:19.165685" elapsed="0.306129"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Newsletter_success_message}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-15T10:36:19.472162" elapsed="0.103287"/>
+<status status="PASS" start="2025-08-16T19:19:12.098797" elapsed="0.157529"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-15T10:36:19.622732" level="INFO">Element 'xpath=//div[@class='alert alert-success alert-dismissible']' contains text 'Success: Your newsletter subscription has been successfully updated!'.</msg>
-<arg>${Newsletter_success_message}</arg>
-<arg>Success: Your newsletter subscription has been successfully updated!</arg>
+<msg time="2025-08-16T19:19:12.293263" level="INFO">Element 'xpath=//div[contains(@class, 'alert alert-success alert-dismissible')]' contains text 'Success: You have added MacBook to your shopping cart!'.</msg>
+<arg>${SUCCESS_MESSAGE_ADD_TO_CART}</arg>
+<arg>Success: You have added MacBook to your shopping cart!</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-15T10:36:19.577456" elapsed="0.045503"/>
+<status status="PASS" start="2025-08-16T19:19:12.256691" elapsed="0.037261"/>
 </kw>
-<doc>User subscribes to the newsletter and verifies the success message.</doc>
-<status status="PASS" start="2025-08-15T10:36:18.994975" elapsed="0.628256"/>
+<doc>Adds a product to the cart.And verifies Success message.</doc>
+<status status="PASS" start="2025-08-16T19:19:12.009753" elapsed="0.284737"/>
 </kw>
-<doc>This test case verifies the subscription to the newsletter.</doc>
-<status status="PASS" start="2025-08-15T10:36:18.433882" elapsed="1.193278"/>
+<kw name="When open cart section" owner="home_page">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-16T19:19:12.296652" level="INFO">Clicking element 'id=cart-total'.</msg>
+<arg>${Cart_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-16T19:19:12.296346" elapsed="0.155200"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${Cart_button}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-08-16T19:19:12.295826" elapsed="0.155821"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${check_for_product_in_cart_intractive_model}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-16T19:19:12.451795" elapsed="0.021367"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-16T19:19:12.488311" level="INFO">Element 'xpath=//*[@id="cart"]/ul/li[1]/table/tbody/tr/td[2]/a' contains text 'MacBook'.</msg>
+<arg>${check_for_product_in_cart_intractive_model}</arg>
+<arg>MacBook</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-16T19:19:12.473421" elapsed="0.014980"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-16T19:19:12.488760" level="INFO">Clicking element 'xpath=//strong[contains(text(), 'View Cart')]'.</msg>
+<arg>${View_Cart_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-16T19:19:12.488555" elapsed="0.266925"/>
+</kw>
+<doc>Opens the cart section to view the added product.</doc>
+<status status="PASS" start="2025-08-16T19:19:12.295208" elapsed="0.460454"/>
+</kw>
+<kw name="Then Verify product in cart" owner="cart_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Verify_Product_in_Cart}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-16T19:19:12.756761" elapsed="0.026632"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-16T19:19:12.800392" level="INFO">Element 'xpath=//div[@id='content']//a[text()='MacBook']' contains text 'MacBook'.</msg>
+<arg>${Verify_Product_in_Cart}</arg>
+<arg>MacBook</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-16T19:19:12.783565" elapsed="0.016917"/>
+</kw>
+<doc>Verifies that the product is present in the cart.</doc>
+<status status="PASS" start="2025-08-16T19:19:12.756286" elapsed="0.044446"/>
+</kw>
+<doc>This test case verifies that a product can be added to the cart and viewed correctly.</doc>
+<status status="PASS" start="2025-08-16T19:19:09.121467" elapsed="3.679714"/>
 </test>
-<test id="s1-t2" name="Unsubscribe from newsletter" line="17">
-<kw name="Given Select newsletter option" owner="login_page">
-<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-15T10:36:19.630753" level="INFO">Clicking element 'xpath=//a[text()='Newsletter']'.</msg>
-<arg>${Newsletter_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-15T10:36:19.630356" elapsed="0.409073"/>
-</kw>
-<arg>5x</arg>
-<arg>2s</arg>
-<arg>Click Element</arg>
-<arg>${Newsletter_button}</arg>
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-08-15T10:36:19.629920" elapsed="0.409752"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Newletter_page_heading}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-15T10:36:20.040059" elapsed="0.050336"/>
-</kw>
-<doc>Selects the newsletter option and verifies the success message.</doc>
-<status status="PASS" start="2025-08-15T10:36:19.629364" elapsed="0.461424"/>
-</kw>
-<kw name="And User Unsubscribes from Newsletter" owner="newsletter_page">
-<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-15T10:36:20.097618" level="INFO">Clicking element 'xpath=//input[@type='radio'and @value='0']'.</msg>
-<arg>${Newsletter_no_radio_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-15T10:36:20.096919" elapsed="0.231403"/>
-</kw>
-<arg>5x</arg>
-<arg>2s</arg>
-<arg>Click Element</arg>
-<arg>${Newsletter_no_radio_button}</arg>
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-08-15T10:36:20.096362" elapsed="0.232163"/>
-</kw>
-<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-15T10:36:20.330287" level="INFO">Clicking element 'xpath=//input[@value='Continue']'.</msg>
-<arg>${Newsletter_continue_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-15T10:36:20.329550" elapsed="0.471529"/>
-</kw>
-<arg>5x</arg>
-<arg>2s</arg>
-<arg>Click Element</arg>
-<arg>${Newsletter_continue_button}</arg>
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-08-15T10:36:20.328857" elapsed="0.472560"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Newsletter_success_message}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-15T10:36:20.802191" elapsed="0.060525"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-15T10:36:20.971526" level="INFO">Element 'xpath=//div[@class='alert alert-success alert-dismissible']' contains text 'Success: Your newsletter subscription has been successfully updated!'.</msg>
-<arg>${Newsletter_success_message}</arg>
-<arg>Success: Your newsletter subscription has been successfully updated!</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-15T10:36:20.863115" elapsed="0.108618"/>
-</kw>
-<doc>User unsubscribes from the newsletter and verifies the success message.</doc>
-<status status="PASS" start="2025-08-15T10:36:20.095490" elapsed="0.876518"/>
-</kw>
-<doc>This test case verifies the unsubscription from the newsletter.</doc>
-<status status="PASS" start="2025-08-15T10:36:19.628203" elapsed="1.344668"/>
-</test>
-<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-08-15T10:36:20.985674" elapsed="4.396188"/>
-</kw>
-<status status="PASS" start="2025-08-15T10:36:11.107490" elapsed="14.274667"/>
+<status status="PASS" start="2025-08-16T19:19:08.793590" elapsed="4.008504"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Subscribe and Unsubscribe news letter Test 17" id="s1" pass="2" fail="0" skip="0">Subscribe and Unsubscribe news letter Test 17</stat>
+<stat name="View product in cart Test 6" id="s1" pass="1" fail="0" skip="0">View product in cart Test 6</stat>
 </suite>
 </statistics>
 <errors>

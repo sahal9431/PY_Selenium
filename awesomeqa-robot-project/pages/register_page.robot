@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    String
 Resource    ../variables/variables.robot
 
 *** Keywords ***
@@ -15,7 +16,8 @@ Enter registration details
     [Documentation]    Enters the registration details into the registration form.
     Input Text    ${First_name_field}    ${First_name}
     Input Text    ${Last_name_filed}    ${Last_name}
-    Input Text    ${Email_field}    ${VALID_EMAIL}
+    ${rand}=    Generate Random String    4
+    Input Text    ${Email_field}    test_${rand}@mail.com
     Input Text    ${Telephone_field}    ${telephone}
     Input Text    ${Password_field}    ${VALID_PASSWORD}
     Input Text    ${Confirm_password_field}    ${VALID_PASSWORD}
