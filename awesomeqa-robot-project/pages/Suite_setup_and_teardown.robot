@@ -16,3 +16,8 @@ Suite Setup for login page
     Enter Login Credentials
     Click login Button
     Verify Login Successful
+
+Suite Teardown for Logout
+    [Documentation]    Logs out of the application.
+    Logout
+    Close All Browsers

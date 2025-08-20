@@ -17,6 +17,9 @@ ${Input_Password_login_page}    name=password
 ${Login_button}    //input[@value='Login']
 ${MY_ACCOUNT_TEXT}  xpath=//h2[text()='My Account']
 ${Home_button_in_my_account}    xpath=//i[@class='fa fa-home']
+${My_Acc_button}    xpath=//a[@title='My Account']
+${Logout_button}    xpath=//a[text()='Logout']
+${Logout_Verification}    xpath=//h1[text()='Account Logout']
 
 #Register page variables
 ${First_name}    Leo
@@ -123,3 +126,17 @@ ${Newsletter_yes_radio_button}    xpath=//input[@type='radio'and @value='1']
 ${Newsletter_no_radio_button}    xpath=//input[@type='radio'and @value='0']
 ${Newsletter_continue_button}    xpath=//input[@value='Continue']
 ${Newsletter_success_message}    xpath=//div[@class='alert alert-success alert-dismissible']
+
+# Edit Account Information variables
+${Edit_Account_Info_button}    xpath=//a[@class='list-group-item' and text()='Edit Account']
+${Edit_Account_page_verification}    xpath=//h1[text()='My Account Information']
+${My_account_info_first_name}    id=input-firstname
+${My_account_info_last_name}    id=input-lastname
+${My_aacount_info_mobile}    id=input-telephone
+${My_account_info_continue_button}    xpath=//input[@type='submit' and @value='Continue']
+${Edit_Account_Success_message}    xpath=//div[@class='alert alert-success alert-dismissible']
+
+#Oder History variables
+${Order_History_button}    xpath=//a[@class='list-group-item' and text()='Order History']
+${Order_History_page_verification}    xpath=//h1[text()='Order History']
+${Oder_History_Empty_Message}    xpath=//p[text()='You have not made any previous orders!']

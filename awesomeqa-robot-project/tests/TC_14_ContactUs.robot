@@ -7,6 +7,7 @@ Resource    ../variables/variables.robot
 *** Test Cases ***
 Contact Us Test Case
     [Documentation]    This test case verifies the Contact Us functionality.
+    [Tags]    P0
     Given Open Home Page
     Then Verify Home Page Title    Your Store
     When Go to Contact Us page

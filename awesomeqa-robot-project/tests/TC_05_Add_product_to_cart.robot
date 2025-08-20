@@ -5,6 +5,7 @@ Resource    ../pages/home_page.robot
 *** Test Cases ***
 Add Product to Cart Test
     [Documentation]    This test case adds a product to the cart and verifies the success message.
+    [Tags]    P1
     Open Home Page
     Verify Home Page Title    Your Store
     Search for product    MacBook

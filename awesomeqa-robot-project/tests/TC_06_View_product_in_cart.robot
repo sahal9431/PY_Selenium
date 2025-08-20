@@ -6,6 +6,7 @@ Resource    ../pages/cart_page.robot
 **** Test Cases ***
 View Product In Cart Test
     [Documentation]    This test case verifies that a product can be added to the cart and viewed correctly.
+    [Tags]    P1
     Given Open Home Page
     And Verify Home Page Title    Your Store
     And Search for product    MacBook

@@ -6,6 +6,7 @@ Resource    ../pages/cart_page.robot
 *** Test Cases ***
 Add Multiple Products to Cart and Verify Total
     [Documentation]    This test case adds multiple products to the cart and verifies the total.
+    [Tags]    P0
     Open Home Page
     Verify Home Page Title    Your Store
     Search for product    MacBook

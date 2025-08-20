@@ -32,3 +32,10 @@ Select newsletter option
     [Documentation]    Selects the newsletter option and verifies the success message.
     Wait Until Keyword Succeeds    5x    2s    Click Element    ${Newsletter_button}
     Wait Until Element Is Visible    ${Newletter_page_heading}    timeout=10s
+
+Logout
+    [Documentation]    Logs out of the application.
+    Wait Until Keyword Succeeds    5x    2s    Click Element    ${My_Acc_button}
+    Wait Until Keyword Succeeds    5x    2s    Click Element    ${Logout_button}
+    Wait Until Element Is Visible    ${Logout_Verification}    timeout=10s
+    Element Should Contain    ${Logout_Verification}    Account Logout

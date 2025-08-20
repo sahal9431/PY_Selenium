@@ -6,6 +6,7 @@ Resource    ../pages/checkout_page.robot
 *** Test Cases ***
 Checkout Product Test
     [Documentation]    This test case verifies that a product can be checked out successfully.
+    [Tags]    P0
     Given Open Home Page
     And Verify Home Page Title    Your Store
     And Search for product    MacBook

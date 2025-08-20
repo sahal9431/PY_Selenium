@@ -6,6 +6,7 @@ Resource    ../pages/home_page.robot
 *** Test Cases ***
 Registration Test Case
     [Documentation]    This test case verifies the registration functionality of the application.
+    [Tags]    P1
     Given Open Home Page
     And Verify Home Page Title    Your Store
     And Open Register Page
